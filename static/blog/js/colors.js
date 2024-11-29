@@ -1,5 +1,8 @@
 $(document).ready(function(){
-	
+	$(".color_mine" ).click(function(){
+		$("#colors" ).attr("href", "css/color/color_mine.css" );
+		return false;
+	});
 		
 	$(".color1" ).click(function(){
 		$("#colors" ).attr("href", "css/color/color1.css" );

@@ -26,7 +26,7 @@ Version:	1.1
 * Wow JS
 * Scroll Up JS
 * Animate Scroll JS
-* Parallax JS
+* Stellar JS
 * Google Maps JS
 * Preloader JS
 =========================================

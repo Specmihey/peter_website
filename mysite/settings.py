@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
 ]
+
 SITE_ID = 1
 
 MIDDLEWARE = [
@@ -119,11 +120,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = '/static/' #префикс
-STATIC_ROOT = os.path.join(BASE_DIR, 'static') #в боевом режиме
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'musite/static')
-] #указываем путь с созданной папке в нашем проекте
+   os.path.join(BASE_DIR, "static"),
+]
 
 
 # Default primary key field type
