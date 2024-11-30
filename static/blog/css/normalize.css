@@ -469,7 +469,7 @@ Preloader Area CSS
 	transform: scaleX(1);
 }
 .section{
-	padding:100px 0;
+	padding:35px 0;
 }
 .section-title{
 	text-align: center;
@@ -510,7 +510,7 @@ Preloader Area CSS
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative;
-	padding: 120px 0px;
+	padding: 15px 0px;
 }
 .breadcrumbs .bread-inner{
 	z-index:22;
@@ -518,7 +518,6 @@ Preloader Area CSS
 }
 .breadcrumbs h2{
 	color: #fff;
-	text-transform:capitalize;
 	font-size: 38px;
 	font-weight: 700;
 	margin: 0;
@@ -534,7 +533,6 @@ Preloader Area CSS
 	color: #fff;
 	font-size: 15px;
 	font-weight: 500;
-	text-transform: capitalize;
 }
 .breadcrumbs ul li i {
 	margin: 0px 10px;

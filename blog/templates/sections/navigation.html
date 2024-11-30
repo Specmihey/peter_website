@@ -1,0 +1,145 @@
+{% load static %}
+<header class="header style2" >
+    <!-- Topbar -->
+    <div class="topbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-5 col-12">
+                    <!-- Contact -->
+                    <ul class="top-link">
+                        <li><a href="{% url 'about-clinic' %}">О клинике</a></li>
+                        <li><a href="{% url 'doctors' %}">Доктора</a></li>
+                        <li><a href="{% url 'price' %}">Прайс</a></li>
+                        <li><a href="{% url 'contact' %}">Контакты</a></li>
+                    </ul>
+                    <!-- End Contact -->
+                </div>
+                <div class="col-lg-6 col-md-7 col-12">
+                    <!-- Top Contact -->
+                    <ul class="top-contact">
+                        <li><i class="fa fa-phone"></i>+36 70 405 6646</li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:nnnyorba@gmail.com">nnnyorba@gmail.com</a></li>
+                    </ul>
+                    <!-- End Top Contact -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Topbar -->
+    <!-- Middle Header -->
+    <div class="middle-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-12">
+                    <!-- Start Logo -->
+                    <div class="logo">
+                        <a href="{% url 'home' %}"><img class="logo_mine" src="{% static 'blog/img/digital-dental-art_160.jpg' %}" alt="Logo"></a>
+                    </div>
+                    <!-- End Logo -->
+                    <!-- Mobile Nav -->
+                    <div class="mobile-nav"></div>
+                    <!-- End Mobile Nav -->
+                </div>
+                <div class="col-lg-9 col-md-9 col-12">
+                    <div class="widget-main">
+                        <!-- Single Widget -->
+                        <div class="single-widget">
+                            <i class="icofont-ui-call"></i>
+                            <p>Телефон</p>
+                            <h4>+36 70 405 6646</h4>
+                        </div>
+                        <!--/ End Single Widget -->
+                        <!-- Single Widget -->
+                        <div class="single-widget">
+                            <i class="icofont-clock-time"></i>
+                            <p>Время работы</p>
+                            <h4>Понед-Пятн: 08:00 - 20:00</h4>
+                        </div>
+                        <!--/ End Single Widget -->
+                        <!-- Single Widget -->
+                        <div class="single-widget button">
+                            <div class="get-quote">
+                                <a href="appointment.html" class="btn">Записаться на прием</a>
+                            </div>
+                        </div>
+                        <!--/ End Single Widget -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Middle Header -->
+    <!-- Header Inner -->
+    <div class="header-inner">
+        <div class="container">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Main Menu -->
+                        <div class="main-menu">
+                            <nav class="navigation">
+                                <ul class="nav menu">
+                                    <li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>
+                                    <a href="{% url 'home' %}">Главная </a>
+                                    </li>
+                                    <li {% if request.resolver_match.url_name == 'doctors' %}class="active"{% endif %}>
+                                    <a href="{% url 'doctors' %}">Наши врачи</a>
+                                    </li>
+                                    <li
+{% if request.resolver_match.url_name == 'service' %}
+    class="active"
+{% elif request.resolver_match.url_name == 'price' %}
+    class="active"
+{% endif %}><a href="#">Прайс <i class="icofont-rounded-down"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'service' %}">Услуги</a></li>
+                                            <li><a href="{% url 'price' %}">Прайс</a></li>
+                                        </ul>
+                                    </li>
+                                    <li
+{% if request.resolver_match.url_name == 'about-clinic' %}
+    class="active"
+{% elif request.resolver_match.url_name == 'faq' %}
+    class="active"
+{% elif request.resolver_match.url_name == 'privacy_policy' %}
+    class="active"
+{% elif request.resolver_match.url_name == 'time_table' %}
+    class="active"
+{% endif %}>
+                                    <a href="#">О нас <i class="icofont-rounded-down"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'about-clinic' %}">О клинике</a></li>
+                                            <li><a href="{% url 'time_table' %}">Время работы</a></li>
+                                            <li><a href="{% url 'privacy_policy' %}">Privacy policy</a></li>
+                                            <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Блог <i class="icofont-rounded-down"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="blog-grid.html">Blog Grid</a></li>
+                                            <li><a href="blog-single.html">Blog Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!--/ End Main Menu -->
+                        <div class="right-bar">
+                        <!-- Search Form -->
+                        <div class="search-top">
+                            <div class="search"><a href="#0"><i class="icofont-search-1"></i></a></div>
+                            <form class="search-form">
+                                <input type="text" placeholder="search" name="search">
+                                <button value="search" type="submit"><i class="icofont-search-1"></i></button>
+                            </form>
+                        </div>
+                        <!--/ End Search Form -->
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ End Header Inner -->
+</header>
