@@ -945,7 +945,7 @@ body{
 .why-choose .choose-right{
 	height:100%;
 	width:100%;
-	background-image:url('https://via.placeholder.com/2000x1200');
+	background-image:url('/static/blog/img/2024-11-30_09-53-36.png');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -2652,7 +2652,7 @@ body{
 	Start Appointment CSS
 ============================*/
 .appointment{
-	background:#fff;
+	background:#f9f9f9;
 	padding-top:100px;
 }
 .appointment.single-page {
