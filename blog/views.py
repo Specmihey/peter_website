@@ -84,3 +84,47 @@ def contact(request):
    }
    return render(request, 'blog/contact.html', context=context)
 
+def appointment(request):
+   context={
+       'title': 'Записаться на прием',
+       'super_title': 'Записаться на прием',
+       'description': 'Записаться на прием к врачу клиники Digital Dental Art',
+
+   }
+   return render(request, 'blog/appointment.html', context=context)
+
+def mail_success(request):
+   context={
+       'title': 'Ваше сообщение отправлено',
+       'super_title': 'Записаться на прием',
+       'description': 'Записаться на прием к врачу клиники Digital Dental Art',
+
+   }
+   return render(request, 'sections/mail-success.html', context=context)
+
+def blog_grid(request):
+   context={
+       'title': 'Статьи',
+       'super_title': 'Каталог статей',
+       'description': 'Полезные статьи клиники ',
+
+   }
+   return render(request, 'blog/articles/blog-grid.html', context=context)
+
+def blog_single(request):
+   context={
+       'title': 'Пример одной статьи',
+       'super_title': 'Каталог статей',
+       'description': 'Полезные статьи клиники ',
+
+   }
+   return render(request, 'blog/articles/blog-single.html', context=context)
+
+def doctor_details(request):
+   context={
+       'title': 'Пример одного доктора',
+       'super_title': 'Доктор one',
+       'description': 'Полезные статьи клиники ',
+
+   }
+   return render(request, 'blog/doctor-details.html', context=context)

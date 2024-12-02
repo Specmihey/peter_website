@@ -53,13 +53,13 @@
                         <div class="single-widget">
                             <i class="icofont-clock-time"></i>
                             <p>Время работы</p>
-                            <h4>Понед-Пятн: 08:00 - 20:00</h4>
+                            <h4>Пн-Пт: 08:00 - 20:00</h4>
                         </div>
                         <!--/ End Single Widget -->
                         <!-- Single Widget -->
                         <div class="single-widget button">
                             <div class="get-quote">
-                                <a href="appointment.html" class="btn">Записаться на прием</a>
+                                <a href="{% url 'appointment' %}" class="btn">Записаться на прием</a>
                             </div>
                         </div>
                         <!--/ End Single Widget -->
@@ -90,8 +90,11 @@
     class="active"
 {% elif request.resolver_match.url_name == 'price' %}
     class="active"
-{% endif %}><a href="#">Прайс <i class="icofont-rounded-down"></i></a>
+{% elif request.resolver_match.url_name == 'appointment' %}
+    class="active"
+{% endif %}><a href="#">Услуги <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
+                                            <li><a href="{% url 'appointment' %}">Записаться на прием</a></li>
                                             <li><a href="{% url 'service' %}">Услуги</a></li>
                                             <li><a href="{% url 'price' %}">Прайс</a></li>
                                         </ul>
@@ -114,11 +117,7 @@
                                             <li><a href="{% url 'faq' %}">FAQ</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Блог <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog-grid.html">Blog Grid</a></li>
-                                            <li><a href="blog-single.html">Blog Details</a></li>
-                                        </ul>
+                                    <li {% if request.resolver_match.url_name == 'blog_grid' %}class="active"{% endif %}><a href="{% url 'blog_grid' %}">Блог </i></a>
                                     </li>
                                     <li {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">Контакты</a></li>
                                 </ul>
@@ -130,7 +129,7 @@
                         <div class="search-top">
                             <div class="search"><a href="#0"><i class="icofont-search-1"></i></a></div>
                             <form class="search-form">
-                                <input type="text" placeholder="search" name="search">
+                                <input type="text" placeholder="Поиск" name="search">
                                 <button value="search" type="submit"><i class="icofont-search-1"></i></button>
                             </form>
                         </div>

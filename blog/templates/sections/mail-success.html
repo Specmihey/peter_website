@@ -1,0 +1,26 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% block breadcrumbs %}
+{% include "sections/breadcrumbs.html" %}
+{% endblock breadcrumbs %}
+<!-- Mail Success Page -->
+<section class="mail-seccess section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3 col-12">
+                <!-- Error Inner -->
+                <div class="success-inner">
+                    <h1><i class="icofont-send-mail"></i><span>Ваше Письмо успешно отправлено!</span></h1>
+                    <p>Aenean eget sollicitudin lorem, et pretium felis. Nullam euismod diam libero, sed dapibus leo laoreet ut. Suspendisse potenti. Phasellus urna lacus</p>
+                    <a href="{% url 'home' %}" class="btn">На Главную</a>
+                </div>
+                <!--/ End Error Inner -->
+            </div>
+        </div>
+    </div>
+</section>
+<!--/ End Mail Success -->
+{% endblock content %}

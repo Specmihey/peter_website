@@ -479,7 +479,6 @@ Preloader Area CSS
 .section-title h2 {
 	font-size: 32px;
 	font-weight: 600;
-	text-transform: capitalize;
 	margin-bottom: 24px;
 	position: relative;
 	color: #2C2D3F;
@@ -505,7 +504,7 @@ Preloader Area CSS
 }
 /* Bread Crumbs */
 .breadcrumbs {
-	background-image: url('https://via.placeholder.com/1600x350');
+	background-image: url('/static/blog/img/client-bg.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;

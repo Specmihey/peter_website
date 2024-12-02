@@ -1,0 +1,36 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% block breadcrumbs %}
+{% include "sections/breadcrumbs.html" %}
+{% endblock breadcrumbs %}
+		<section class="appointment single-page">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="appointment-inner">
+							<div class="title">
+								<h3>Забронируйте Ваш прием у врача</h3>
+<!--								<p>We will confirm your appointment within 2 hours</p>-->
+							</div>
+							{% include "sections/appointment_form.html" %}
+						</div>
+					</div>
+					<div class="col-lg-12 col-md-12 ">
+						<div class="work-hour">
+							<h3>Working Hours</h3>
+							<ul class="time-sidual">
+								<li class="day">Понедельник - Пятница <span>8.00-20.00</span></li>
+								<li class="day">Суббота <span>Закрыто</span></li>
+								<li class="day">Воскресенье <span>Закрыто</span></li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/End Appointment -->
+{% endblock content %}

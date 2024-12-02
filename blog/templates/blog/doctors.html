@@ -15,14 +15,14 @@
 						<!-- Single Team -->
 						<div class="single-team">
 							<div class="t-head">
-								<img src="https://via.placeholder.com/560x575" alt="#">
+								<img src="{% static '/blog/img/Dr_Tóth-Gáspár Máté.jpg' %}" alt="#">
 								<div class="t-icon">
-									<a href="appointment.html" class="btn">Get Appointment</a>
+									<a href="{% url 'doctor_details' %}" class="btn">Подробнее</a>
 								</div>
 							</div>
 							<div class="t-bottom">
 								<p>Neurosurgeon</p>
-								<h2><a href="doctor-details.html">Collis Molate</a></h2>
+								<h2><a href="{% url 'doctor_details' %}">Collis Molate</a></h2>
 							</div>
 						</div>
 						<!-- End Single Team -->

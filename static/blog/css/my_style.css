@@ -3,6 +3,9 @@
     height: auto;
     max-width: 30%;
 }
+.article .btn {
+    color: white !important;
+}
 /* Вертикальный градиент для слайдера
 .card__content {
   background-image: linear-gradient(
