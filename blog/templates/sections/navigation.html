@@ -82,17 +82,11 @@
                                     <li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>
                                     <a href="{% url 'home' %}">Главная </a>
                                     </li>
-                                    <li {% if request.resolver_match.url_name == 'doctors' %}class="active"{% endif %}>
+                                    <li {% if '/doctors/' in request.path %}class="active"{% endif %}>
                                     <a href="{% url 'doctors' %}">Наши врачи</a>
                                     </li>
-                                    <li
-{% if request.resolver_match.url_name == 'service' %}
-    class="active"
-{% elif request.resolver_match.url_name == 'price' %}
-    class="active"
-{% elif request.resolver_match.url_name == 'appointment' %}
-    class="active"
-{% endif %}><a href="#">Услуги <i class="icofont-rounded-down"></i></a>
+                                    <li {% if '/service/' in request.path %}class="active"{% endif %}>
+                                    <a href="#">Услуги <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="{% url 'appointment' %}">Записаться на прием</a></li>
                                             <li><a href="{% url 'service' %}">Услуги</a></li>
@@ -100,15 +94,16 @@
                                         </ul>
                                     </li>
                                     <li
-{% if request.resolver_match.url_name == 'about-clinic' %}
-    class="active"
-{% elif request.resolver_match.url_name == 'faq' %}
-    class="active"
-{% elif request.resolver_match.url_name == 'privacy_policy' %}
-    class="active"
-{% elif request.resolver_match.url_name == 'time_table' %}
-    class="active"
-{% endif %}>
+                                    {% if request.resolver_match.url_name == 'about-clinic' %}
+                                        class="active"
+                                    {% elif request.resolver_match.url_name == 'faq' %}
+                                        class="active"
+                                    {% elif request.resolver_match.url_name == 'privacy_policy' %}
+                                        class="active"
+                                    {% elif request.resolver_match.url_name == 'time_table' %}
+                                        class="active"
+                                    {% endif %}
+                                    >
                                     <a href="#">О нас <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="{% url 'about-clinic' %}">О клинике</a></li>
@@ -117,7 +112,7 @@
                                             <li><a href="{% url 'faq' %}">FAQ</a></li>
                                         </ul>
                                     </li>
-                                    <li {% if request.resolver_match.url_name == 'blog_grid' %}class="active"{% endif %}><a href="{% url 'blog_grid' %}">Блог </i></a>
+                                    <li {% if '/blog-grid/' in request.path %}class="active"{% endif %}><a href="{% url 'blog_grid' %}">Блог</i></a>
                                     </li>
                                     <li {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">Контакты</a></li>
                                 </ul>
