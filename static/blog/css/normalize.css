@@ -516,6 +516,13 @@ Preloader Area CSS
 	z-index:22;
 	text-align:center;
 }
+.breadcrumbs h1{
+	color: #fff;
+	font-size: 38px;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+}
 .breadcrumbs h2{
 	color: #fff;
 	font-size: 38px;

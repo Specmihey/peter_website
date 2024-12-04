@@ -102,23 +102,33 @@ def blog_single(request):
    }
    return render(request, 'blog/articles/blog-single.html', context=context)
 
+doctors_grig = [
+    {'name': 'Dr. Nyorba Peter', 'ships_crew': 'Медицинский руководитель', 'url_name': '/static/blog/img/doctors/Dr_Nyorba_Peter.jpg'},
+    {'name': 'Nyorba Peter', 'ships_crew': 'финансовый директор', 'url_name': '/static/blog/img/doctors/Nyorba_Peter.jpg'},
+    {'name': 'Mósa Rita Emese', 'ships_crew': 'главная ассистентка', 'url_name': '/static/blog/img/doctors/Rita_Emese.jpg'},
+    {'name': 'Kiss Anna', 'ships_crew': 'администратор', 'url_name': '/static/blog/img/doctors/Kiss_Anna.jpg'},
+    {'name': 'Toth Viktoria', 'ships_crew': 'ассистентка ', 'url_name': '/static/blog/img/doctors/Toth_Viktoria.jpg'},
+    {'name': 'Farkas Fanni', 'ships_crew': 'ассистентка ', 'url_name': '/static/blog/img/doctors/Farkas_Fanni.jpg'},
+    {'name': 'Dr. Aydin Yazdizadeh', 'ships_crew': ' врач-стоматолог-хирург', 'url_name': '/static/blog/img/doctors/Dr_Aydin_Yazdizadeh.jpg'},
+    {'name': 'Dr. Ali Fatemi', 'ships_crew': 'эндодонтист ', 'url_name': '/static/blog/img/doctors/Dr_Ali_Fatemi.jpg'},
+]
 def doctors(request):
    context={
        'title': 'Наши врачи',
-       'super_title': 'Познакомьтесь с нашими квалифицированными врачами',
+       'super_title': 'Познакомьтесь с нашими врачами',
        'description': 'Лучшие врачи клиники Digital Dental Art',
-
+       'doctors_grig': doctors_grig,
    }
    return render(request, 'blog//doctors/doctors.html', context=context)
 
-def doctor_details(request):
+def Dr_Nyorba_Peter(request):
    context={
-       'title': 'Пример одного доктора',
-       'super_title': 'Доктор one',
-       'description': 'Полезные статьи клиники ',
+       'title': 'Dr. Nyorba Peter',
+       'super_title': 'Медицинский руководитель',
+       'description': 'Медицинский руководитель',
 
    }
-   return render(request, 'blog/doctors/doctor-details.html', context=context)
+   return render(request, 'blog/doctors/Dr_Nyorba_Peter.html', context=context)
 
 
 # ------------------------------- Лечение

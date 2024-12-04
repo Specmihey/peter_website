@@ -8,117 +8,30 @@
 {% endblock breadcrumbs %}
 
  		<!-- Start Team -->
+
 		<section id="team" class="team section single-page">
 			<div class="container">
 				<div class="row">
+					{% for item in doctors_grig %}
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Single Team -->
 						<div class="single-team">
 							<div class="t-head">
-								<img src="{% static '/blog/img/Dr_Tóth-Gáspár Máté.jpg' %}" alt="#">
+								<img src="{{ item.url_name }}" alt="#">
 								<div class="t-icon">
-									<a href="{% url 'doctor_details' %}" class="btn">Подробнее</a>
+									<a href="{% url 'Dr_Nyorba_Peter' %}" class="btn">Подробнее</a>
 								</div>
 							</div>
 							<div class="t-bottom">
-								<p>Neurosurgeon</p>
-								<h2><a href="{% url 'doctor_details' %}">Collis Molate</a></h2>
+								<p>{{ item.ships_crew }}</p>
+								<h2><a href="{% url 'Dr_Nyorba_Peter' %}">{{ item.name }}</a></h2>
 							</div>
 						</div>
 						<!-- End Single Team -->
 					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Team -->
-						<div class="single-team">
-							<!-- Team Head -->
-							<div class="t-head">
-								<img src="https://via.placeholder.com/560x575" alt="#">
-								<div class="t-icon">
-									<a href="appointment.html" class="btn">Get Appointment</a>
-								</div>
-							</div>
-							<!-- Team Bottom -->
-							<div class="t-bottom">
-								<p>Neurosurgeon</p>
-								<h2><a href="doctor-details.html">Domani Plavon</a></h2>
-							</div>
-							<!--/ End Team Bottom -->
-						</div>
-						<!-- End Single Team -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Team -->
-						<div class="single-team">
-							<!-- Team Head -->
-							<div class="t-head">
-								<img src="https://via.placeholder.com/560x575" alt="#">
-								<div class="t-icon">
-									<a href="appointment.html" class="btn">Get Appointment</a>
-								</div>
-							</div>
-							<!-- Team Bottom -->
-							<div class="t-bottom">
-								<p>Dental Surgeon</p>
-								<h2><a href="doctor-details.html">John Mard</a></h2>
-							</div>
-							<!--/ End Team Bottom -->
-						</div>
-						<!-- End Single Team -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Team -->
-						<div class="single-team">
-							<!-- Team Head -->
-							<div class="t-head">
-								<img src="https://via.placeholder.com/560x575" alt="#">
-								<div class="t-icon">
-									<a href="appointment.html" class="btn">Get Appointment</a>
-								</div>
-							</div>
-							<!-- Team Bottom -->
-							<div class="t-bottom">
-								<p>Neurosurgeon</p>
-								<h2><a href="doctor-details.html">Amanal Frond</a></h2>
-							</div>
-							<!--/ End Team Bottom -->
-						</div>
-						<!-- End Single Team -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Team -->
-						<div class="single-team">
-							<div class="t-head">
-								<img src="https://via.placeholder.com/560x575" alt="#">
-								<div class="t-icon">
-									<a href="appointment.html" class="btn">Get Appointment</a>
-								</div>
-							</div>
-							<div class="t-bottom">
-								<p>Neurosurgeon</p>
-								<h2><a href="doctor-details.html">Collis Molate</a></h2>
-							</div>
-						</div>
-						<!-- End Single Team -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Single Team -->
-						<div class="single-team">
-							<!-- Team Head -->
-							<div class="t-head">
-								<img src="https://via.placeholder.com/560x575" alt="#">
-								<div class="t-icon">
-									<a href="appointment.html" class="btn">Get Appointment</a>
-								</div>
-							</div>
-							<!-- Team Bottom -->
-							<div class="t-bottom">
-								<p>Neurosurgeon</p>
-								<h2><a href="doctor-details.html">Domani Plavon</a></h2>
-							</div>
-							<!--/ End Team Bottom -->
-						</div>
-						<!-- End Single Team -->
-					</div>
+					{% endfor %}
+
+
 				</div>
 			</div>
 		</section>

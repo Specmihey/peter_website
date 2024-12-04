@@ -9,7 +9,7 @@ urlpatterns = [
     path('', index, name='home'),
     # Doctors' Block -- Блок врачей
     path('doctors/', doctors, name='doctors'), # catalog of doctors
-    path('doctors/doctor-details/', doctor_details, name='doctor_details'), # an example of a single doctor's page
+    path('doctors/Dr_Nyorba_Peter/', Dr_Nyorba_Peter, name='Dr_Nyorba_Peter'), # an example of a single doctor's page
     # About clinic -- О клинике
     path('service/price/', price, name='price'), #price
     path('about-clinic/', about_clinic, name='about-clinic'), #о клинике
