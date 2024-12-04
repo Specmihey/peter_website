@@ -51,7 +51,7 @@ Version:	1.1
 body{
     font-family: 'Poppins', sans-serif;
 	font-weight: 400;
-	font-size:14px;
+	font-size:16px;
 	color:#888;
 }
 #scrollUp {
@@ -401,7 +401,6 @@ body{
 	color: #666;
 	display: block;
 	font-weight: 400;
-	text-transform: capitalize;
 	background: transparent;
 	-webkit-transition:all 0.2s ease;
 	-moz-transition:all 0.2s ease;

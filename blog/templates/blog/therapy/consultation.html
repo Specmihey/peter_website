@@ -1,0 +1,105 @@
+ {% extends 'blog/base.html' %}
+ {% load static %}
+
+ {% block content %}
+
+{% block breadcrumbs %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>{{ super_title }}</h2>
+                    <ul class="bread-list">
+                        <li><a href="{% url 'home' %}">Главная</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+						<li><a href="{% url 'service' %}">Лечение</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+                        <li class="active">{{ title }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+{% endblock breadcrumbs %}
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!--  Inner -->
+<div class="row">
+	<div class="col-lg-8">
+		<div class="department-left">
+			<h2>Почему важен регулярный осмотр у стоматолога? </h2>
+<p>Чтобы сохранить здоровье, необходимы регулярные медицинские осмотры, неотъемлемой частью которых является осмотр у стоматолога.
+	Несмотря на это, многие люди обращаются к стоматологу только при появлении болезненных симптомов.
+	Однако эти обследования служат цели раннего выявления стоматологических заболеваний и предотвращения серьезных, часто необратимых изменений.
+	Наши обученные специалисты будут в вашем распоряжении во время стоматологической консультации.
+</p>
+
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="department-right">
+			<img src="{% static '/blog/img/consult/fogaszati-konzultacio-dentist-examining-female-patient-1.jpg' %}" alt="#">
+		</div>
+	</div>
+</div>
+						<hr>
+
+
+
+<div class="row">
+		<div class="col-lg-4">
+		<div class="department-left">
+			<img class="float-left" src="{% static '/blog/img/consult/fogaszati-konzultacio-dentist-examining-female-patient-with-tools-2.jpg' %}" alt="#">
+		</div>
+	</div>
+	<div class="col-lg-8">
+		<div class="department-rigth">
+			<h2>Из чего состоит консультация стоматолога и оценка здоровья в нашей клинике? </h2>
+
+			<ul class="list">
+				<li><i class="fa fa-check fa-2x"></i> получение цифрового панорамного рентгеновского снимка</li>
+				<li><i class="fa fa-check fa-2x"></i> обследования полости рта</li>
+				<li><i class="fa fa-check fa-2x"></i> индивидуальные рекомендации по гигиене полости рта</li>
+				<li><i class="fa fa-check fa-2x"></i> создайте индивидуальный план лечения – при необходимости</li>
+				<li><i class="fa fa-check fa-2x"></i> обсуждаем варианты лечения, обсуждаем ваш график работы</li>
+			</ul>
+			<br>
+		</div>
+	</div>
+</div>
+
+{% include "sections/button-center.html" %}
+						<hr>
+<div class="row">
+	<div class="col-lg-8">
+		<div class="department-left">
+			<h2>Консультация стоматолога, проверка состояния зубов также подходит для детей </h2>
+<p>Консультация стоматолога, проверка состояния зубов также подходит для детей
+Почему проверка состояния зубов важна для детей? В детстве очень важно научиться ухаживать за зубами и полостью рта, от этого зависит, какими будут ваши зубы во взрослом возрасте.
+Регулярные стоматологические осмотры рекомендуются уже при прорезывании первых зубов у детей, чтобы выявить и вылечить начинающийся кариес, а в случае неправильного протезирования стоматолог должен назначить ортодонтические процедуры.
+</p>
+
+		</div>
+	</div>
+	<div class="col-lg-4">
+		<div class="department-right">
+			<img src="{% static '/blog/img/consult/fogaszati-konzultacio-little-boy-patient-dentist-3.jpg' %}" alt="#">
+		</div>
+	</div>
+</div>
+						<!--/ End Inner -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End  Page -->
+
+
+{% endblock content %}

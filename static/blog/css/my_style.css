@@ -6,6 +6,36 @@
 .article .btn {
     color: white !important;
 }
+.app_btn .btn {
+    color: #fff;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: large;
+    }
+
+.zero h1, h2, h3, h4, h5, h6{
+    font-size: revert;
+    padding-bottom: 10px;
+}
+
+.serv a {
+	text-decoration:underline !important;
+    font-style: italic !important;
+    font-weight: bold !important;
+}
+
+.pad_div_25px {
+    padding-top: 25px;
+}
+.pad_div_25px img {
+    max-width: 100%;
+    height: auto;
+ }
+ .padding-top-35px {
+ padding-top: 35px;
+ }
 /* Вертикальный градиент для слайдера
 .card__content {
   background-image: linear-gradient(

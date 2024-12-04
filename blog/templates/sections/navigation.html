@@ -82,34 +82,52 @@
                                     <li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>
                                     <a href="{% url 'home' %}">Главная </a>
                                     </li>
+
+                                    <li {% if '/service/' in request.path %}class="active"{% endif %}>
+                                    <a href="{% url 'service' %}">Лечение <i class="icofont-rounded-down"></i></a>
+                                        <ul class="dropdown">
+                                            <li><a href="{% url 'consultation' %}">Консультация стоматолога,<br>оценка состояния зубов</a></li>
+                                            <li><a href="{% url 'aesthetic_dentistry' %}">Эстетическая стоматология</a></li>
+                                            <li><a href="#">Коронки</a></li>
+                                            <li><a href="#">Зубные мосты</a></li>
+                                            <li><a href="#">Протезы</a></li>
+                                            <li><a href="#">Пломбирование</a></li>
+                                            <li><a href="#">Лечение корневых каналов</a></li>
+                                            <li><a href="#">Вкладки на зуб (inlay/onlay)</a></li>
+                                            <li><a href="#">Удаление зуба</a></li>
+                                            <li><a href="#">Удаление зуба мудрости</a></li>
+                                            <li><a href="#">Зубная имплантация</a></li>
+                                            <li><a href="#">Замена костной ткани</a></li>
+                                        </ul>
+                                    </li>
+
                                     <li {% if '/doctors/' in request.path %}class="active"{% endif %}>
                                     <a href="{% url 'doctors' %}">Наши врачи</a>
                                     </li>
-                                    <li {% if '/service/' in request.path %}class="active"{% endif %}>
-                                    <a href="#">Услуги <i class="icofont-rounded-down"></i></a>
-                                        <ul class="dropdown">
-                                            <li><a href="{% url 'appointment' %}">Записаться на прием</a></li>
-                                            <li><a href="{% url 'service' %}">Услуги</a></li>
-                                            <li><a href="{% url 'price' %}">Прайс</a></li>
-                                        </ul>
-                                    </li>
+
                                     <li
                                     {% if request.resolver_match.url_name == 'about-clinic' %}
                                         class="active"
-                                    {% elif request.resolver_match.url_name == 'faq' %}
+                                    {% elif request.resolver_match.url_name == 'price' %}
+                                        class="active"
+                                    {% elif request.resolver_match.url_name == 'time_table' %}
                                         class="active"
                                     {% elif request.resolver_match.url_name == 'privacy_policy' %}
                                         class="active"
-                                    {% elif request.resolver_match.url_name == 'time_table' %}
+                                    {% elif request.resolver_match.url_name == 'faq' %}
+                                        class="active"
+                                    {% elif request.resolver_match.url_name == 'appointment' %}
                                         class="active"
                                     {% endif %}
                                     >
                                     <a href="#">О нас <i class="icofont-rounded-down"></i></a>
                                         <ul class="dropdown">
                                             <li><a href="{% url 'about-clinic' %}">О клинике</a></li>
+                                            <li><a href="{% url 'price' %}">Прайс</a></li>
                                             <li><a href="{% url 'time_table' %}">Время работы</a></li>
                                             <li><a href="{% url 'privacy_policy' %}">Privacy policy</a></li>
                                             <li><a href="{% url 'faq' %}">FAQ</a></li>
+                                            <li><a href="{% url 'appointment' %}">Записаться на прием</a></li>
                                         </ul>
                                     </li>
                                     <li {% if '/blog-grid/' in request.path %}class="active"{% endif %}><a href="{% url 'blog_grid' %}">Блог</i></a>

@@ -11,15 +11,6 @@ def index(request):
    }
    return render(request, 'blog/index.html', context=context)
 
-def doctors(request):
-   context={
-       'title': 'Наши врачи',
-       'super_title': 'Познакомьтесь с нашими квалифицированными врачами',
-       'description': 'Лучшие врачи клиники Digital Dental Art',
-
-   }
-   return render(request, 'blog/doctors.html', context=context)
-
 def about_clinic(request):
    context={
        'title': 'О клинике',
@@ -47,15 +38,6 @@ def faq(request):
 
    }
    return render(request, 'blog/faq.html', context=context)
-
-def service(request):
-   context={
-       'title': 'Услуги',
-       'super_title': 'Услуги клиники',
-       'description': 'Стоматологическая клиника Digital Dental Art',
-
-   }
-   return render(request, 'blog/service.html', context=context)
 
 def time_table(request):
    context={
@@ -120,6 +102,15 @@ def blog_single(request):
    }
    return render(request, 'blog/articles/blog-single.html', context=context)
 
+def doctors(request):
+   context={
+       'title': 'Наши врачи',
+       'super_title': 'Познакомьтесь с нашими квалифицированными врачами',
+       'description': 'Лучшие врачи клиники Digital Dental Art',
+
+   }
+   return render(request, 'blog//doctors/doctors.html', context=context)
+
 def doctor_details(request):
    context={
        'title': 'Пример одного доктора',
@@ -127,4 +118,46 @@ def doctor_details(request):
        'description': 'Полезные статьи клиники ',
 
    }
-   return render(request, 'blog/doctor-details.html', context=context)
+   return render(request, 'blog/doctors/doctor-details.html', context=context)
+
+
+# ------------------------------- Лечение
+def service(request):
+   context={
+       'title': 'Услуги клиники',
+       'super_title': 'Услуги клиники',
+       'description': 'Стоматологическая клиника Digital Dental Art',
+
+   }
+   return render(request, 'blog/therapy/service.html', context=context)
+
+def consultation(request):
+   context={
+       'title': 'Консультация',
+       'super_title': 'Лечение',
+       'description': 'Полезные статьи клиники ',
+
+   }
+   return render(request, 'blog/therapy/consultation.html', context=context)
+
+def aesthetic_dentistry(request):
+   context={
+       'title': 'эстетическая стоматология',
+       'super_title': 'Услуги клиники',
+       'description': 'Стоматологическая клиника Digital Dental Art',
+
+   }
+   return render(request, 'blog/therapy/aesthetic_dentistry.html', context=context)
+def teeth_whitening(request):
+   context={
+       'title': 'Отбеливание зубов',
+       'super_title': 'Услуги клиники',
+       'description': 'Стоматологическая клиника Digital Dental Art',
+
+   }
+   return render(request, 'blog/therapy/teeth_whitening.html', context=context)
+
+
+
+
+

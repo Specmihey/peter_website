@@ -8,6 +8,14 @@
                     <ul class="bread-list">
                         <li><a href="{% url 'home' %}">Главная</a></li>
                         <li><i class="icofont-simple-right"></i></li>
+{% if '/doctors/' in request.path %}
+                        <li><a href="{% url 'doctors' %}">Врачи</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+{% endif %}
+{% if '/service/' in request.path %}
+                        <li><a href="{% url 'service' %}">Лечение</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+{% endif %}
                         <li class="active">{{ title }}</li>
                     </ul>
                 </div>
