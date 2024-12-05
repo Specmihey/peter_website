@@ -18,40 +18,63 @@
         </div>
         <div class="col-lg-6 col-md-6 col-12">
             <div class="form-group">
-                <div class="nice-select form-control wide" tabindex="0"><span class="current">Направление</span>
+                <div class="nice-select form-control wide" tabindex="0"><span class="current">Направление лечения</span>
                     <ul class="list">
-                        <li data-value="1" class="option selected ">Направление</li>
-                        <li data-value="2" class="option">Удаление зубов</li>
-                        <li data-value="3" class="option">Протезирование</li>
-                        <li data-value="4" class="option">Ортодонтия</li>
-                        <li data-value="5" class="option">Пародонтология</li>
+                        <li data-value="Kezelések" class="option selected ">Лечение</li>
+                        <li data-value="Csontpótlás" class="option">Замена кости</li>
+                        <li data-value="All-on-4™ és All-on-6™ fogpótlások" class="option">Протезы All-on-4™ и All-on-6™</li>
+                        <li data-value="8 implantátumon rögzített körhíd" class="option">Круглый мост на 8 имплантах</li>
+                        <li data-value="Bölcsességfog eltávolítás" class="option">Удаление зуба мудрости</li>
+                        <li data-value="Foghúzás5" class="option">Удаление зуба</li>
+                        <li data-value="Fog implantáció" class="option">Имплантация зубов</li>
+                        <li data-value="Inlay/ Onlay" class="option">Inlay/ Onlay</li>
+                        <li data-value="Gyökérkezelés" class="option">Лечение корней</li>
+                        <li data-value="Tömés" class="option">Пломбирование</li>
+                        <li data-value="Ideiglenes fogpótlások" class="option">Временные протезы</li>
+                        <li data-value="Implantátumokkal stabilizált kivehető fogsorok" class="option">Съемные протезы, стабилизированные имплантатами</li>
+                        <li data-value="Teljes/ részleges kivehető fogsorok" class="option">Полные/частичные съемные протезы</li>
+                        <li data-value="Fogászati hidak" class="option">Зубные мосты</li>
+                        <li data-value="E.Max péskerámia korona, héj" class="option">Керамическая коронка E.Max</li>
+                        <li data-value="Cirkónium korona" class="option">Циркониевая коронка</li>
+                        <li data-value="Fémkerámia korona" class="option">Металлокерамическая коронка</li>
+                        <li data-value="E.max préskerámia héj" class="option">Прессованная керамическая оболочка E.max</li>
+                        <li data-value="Fogfehérítés" class="option">Отбеливание зубов</li>
+                        <li data-value="Fogászati konzultáció, fogászati állapotfelmérés" class="option">Консультация стоматолога, оценка состояния зубов</li>
+                        <li data-value="Fogkőeltávolítás" class="option">Удаление зубного камня</li>
+                        <li data-value="Egyéb" class="option">Другое</li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="col-lg-6 col-md-6 col-12">
             <div class="form-group">
-                <div class="nice-select form-control wide" tabindex="0"><span class="current">Доктор</span>
-                    <ul class="list">
-                        <li data-value="1" class="option selected ">Предварительно</li>
-                        <li data-value="2" class="option">Kiss Anna</li>
-                        <li data-value="3" class="option">Dr. Nyorba Péter</li>
-                        <li data-value="4" class="option">Dr. Tóth-Gáspár Máté</li>
-                    </ul>
-                </div>
+                <input type="text" placeholder="Дата рождения" id="datepicker">
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-12">
             <div class="form-group">
-                <input type="text" placeholder="Date" id="datepicker">
+                <input type="file" name="file" id="file_send" placeholder="Выберите файл">
             </div>
         </div>
+
         <div class="col-lg-12 col-md-12 col-12">
             <div class="form-group">
                 <textarea name="message" placeholder="Напишите Ваше сообщение здесь....."></textarea>
             </div>
         </div>
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                  <label class="form-check-label" for="inlineCheckbox1">Я принимаю Уведомление о конфиденциальности.</label>
+                </div>
+            </div>
+        </div>
     </div>
+
+
     <div class="row">
         <div class="col-12">
             <div class="form-group">
@@ -61,4 +84,5 @@
             </div>
         </div>
     </div>
+
 </form>

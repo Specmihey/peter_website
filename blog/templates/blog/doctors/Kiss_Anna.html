@@ -1,0 +1,78 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+{% block breadcrumbs %}
+<!-- Breadcrumbs -->
+{% include "sections/breadcrumbs.html" %}
+<!-- End Breadcrumbs -->
+{% endblock breadcrumbs %}
+
+<div class="doctor-details-area section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="doctor-details-item doctor-details-left">
+                    <img src="{% static '/blog/img/doctors/Kiss_Anna.jpg' %}" alt="{{ title }}">
+                    <div class="doctor-details-contact">
+                        <h3>Contact info</h3>
+                        <ul class="basic-info">
+                            <li>
+                                <i class="icofont-ui-call"></i>
+                                Call : {{ based.phone }}
+                            </li>
+                            <li>
+                                <i class="icofont-ui-message"></i>
+                                {{ based.email }}
+                            </li>
+                            <li>
+                                <i class="icofont-location-pin"></i>
+                                {{ based.address }}
+                            </li>
+                        </ul>
+                        <!-- Social -->
+
+                        <!-- End Social -->
+                        <div class="doctor-details-work">
+                            <h3>Working hours</h3>
+                            <ul class="time-sidual">
+                                <li class="day">Monday - Friday <span>{{ based.time }}</span></li>
+                                <li class="day">Saturday, Sunday <span>Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="doctor-details-item">
+                    <div class="doctor-details-right">
+                        <div class="doctor-name">
+                            <h3 class="name">{{ title }}</h3>
+                            <p class="deg">{{ super_title }}</p>
+<!--                            <p class="degree">MBBS in Neurology, PHD in Neurosurgeon.</p>-->
+                        </div>
+                        <div class="doctor-details-biography">
+                            <h3>Biography</h3>
+
+                            <p>2023.
+                                С марта я укрепляю команду DNP Dental в качестве консультанта по работе с клиентами.
+                                Я считаю, что очень важно, чтобы пациентов встречали на приеме в доброй, дружелюбной, доверительной атмосфере,
+                                поэтому я всегда жду от всех широкой улыбки и открытости.
+                                Я верю, что улыбка или несколько добрых, ободряющих слов помогут вам успокоиться перед процедурой.
+                                Кроме того, я стремлюсь к быстрому и всестороннему оказанию помощи.
+                                На своей предыдущей работе и нынешней учебе я приобрел большой опыт общения с людьми и решения различных проблем,
+                                поэтому могу извлечь из этого пользу как для своих пациентов, так и для коллег.
+                                Я надеюсь, что после дальнейшего обучения я смогу укрепить команду Digital Dental Art на другой должности.
+                            </p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- End Doctor Details -->
+{% endblock content %}

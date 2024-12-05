@@ -9,13 +9,20 @@ urlpatterns = [
     path('', index, name='home'),
     # Doctors' Block -- Блок врачей
     path('doctors/', doctors, name='doctors'), # catalog of doctors
-    path('doctors/Dr_Nyorba_Peter/', Dr_Nyorba_Peter, name='Dr_Nyorba_Peter'), # an example of a single doctor's page
+    path('doctors/Dr_Nyorba_Peter/', Dr_Nyorba_Peter, name='Dr_Nyorba_Peter'), # Dr_Nyorba_Peter
+    path('doctors/Nyorba_Peter/', Nyorba_Peter, name='Nyorba_Peter'), # Nyorba Péter
+    path('doctors/Mosa_Rita_Emese/', Mosa_Rita_Emese, name='Mosa_Rita_Emese'), # Mosa_Rita_Emese
+    path('doctors/Kiss_Anna/', Kiss_Anna, name='Kiss_Anna'), # Kiss_Anna
+    path('doctors/Toth_Viktoria/', Toth_Viktoria, name='Toth_Viktoria'), # Toth_Viktoria
+    path('doctors/Farkas_Fanni/', Farkas_Fanni, name='Farkas_Fanni'), # Farkas_Fanni
+    path('doctors/Dr_Aydin_Yazdizadeh/', Dr_Aydin_Yazdizadeh, name='Dr_Aydin_Yazdizadeh'), # Dr_Aydin_Yazdizadeh
+    path('doctors/Dr_Ali_Fatemi/', Dr_Ali_Fatemi, name='Dr_Ali_Fatemi'), # Dr_Ali_Fatemi
     # About clinic -- О клинике
-    path('service/price/', price, name='price'), #price
+    path('price/', price, name='price'), #price
     path('about-clinic/', about_clinic, name='about-clinic'), #о клинике
     path('faq/', faq, name='faq'), #FAQ
     path('time_table/', time_table, name='time_table'), #time_table
-    path('service/appointment/', appointment, name='appointment'), # Записаться на прием
+    path('appointment/', appointment, name='appointment'), # Записаться на прием
     path('contact/', contact, name='contact'), # contact
     path('mail-success/', mail_success, name='mail_success'), # mail-success
     path('privacy_policy/', privacy_policy, name='privacy_policy'), #privacy_policy
@@ -27,6 +34,8 @@ urlpatterns = [
     path('service/consultation/', consultation, name='consultation'), # Консультация
     path('service/aesthetic-dentistry/', aesthetic_dentistry, name='aesthetic_dentistry'), # эстетическая стоматология
     path('service/aesthetic-dentistry/teeth-whitening/', teeth_whitening, name='teeth_whitening'), # Отбеливание зубов
+    path('service/aesthetic-dentistry/removal-tartar/', removal_tartar, name='removal_tartar'), # Удаление зубного камня
+    path('service/aesthetic-dentistry/pressed-ceramic-shell/', pressed_ceramic_shell_e_max, name='pressed_ceramic_shell_e_max'), # Прессованная керамическая оболочка E.max
 
 ]
 

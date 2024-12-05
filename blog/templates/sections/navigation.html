@@ -17,8 +17,8 @@
                 <div class="col-lg-6 col-md-7 col-12">
                     <!-- Top Contact -->
                     <ul class="top-contact">
-                        <li><i class="fa fa-phone"></i>+36 70 405 6646</li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:nnnyorba@gmail.com">nnnyorba@gmail.com</a></li>
+                        <li><i class="fa fa-phone"></i>{{ based.phone }}</li>
+                        <li><i class="fa fa-envelope"></i><a href="mailto:{{ based.emai }}">{{ based.email }}</a></li>
                     </ul>
                     <!-- End Top Contact -->
                 </div>
@@ -33,7 +33,7 @@
                 <div class="col-lg-3 col-md-3 col-12">
                     <!-- Start Logo -->
                     <div class="logo">
-                        <a href="{% url 'home' %}"><img class="logo_mine" src="{% static 'blog/img/digital-dental-art_160.jpg' %}" alt="Logo"></a>
+                        <a href="{% url 'home' %}"><img class="logo_mine" src="{% static '/blog/img/logo/DNP-10.png' %}" alt="Logo"></a>
                     </div>
                     <!-- End Logo -->
                     <!-- Mobile Nav -->
@@ -46,14 +46,14 @@
                         <div class="single-widget">
                             <i class="icofont-ui-call"></i>
                             <p>Телефон</p>
-                            <h4>+36 70 405 6646</h4>
+                            <h4>{{ based.phone }}</h4>
                         </div>
                         <!--/ End Single Widget -->
                         <!-- Single Widget -->
                         <div class="single-widget">
                             <i class="icofont-clock-time"></i>
                             <p>Время работы</p>
-                            <h4>Пн-Пт: 08:00 - 20:00</h4>
+                            <h4>Пн-Пт: {{ based.time }}</h4>
                         </div>
                         <!--/ End Single Widget -->
                         <!-- Single Widget -->

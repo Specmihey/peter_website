@@ -28,9 +28,10 @@
             </div>
             <div class="col-lg-7">
                 <div class="service-details-inner">
-                    <h2>We always take care <br> our patient</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto blanditiis obcaecati veritatis magnam pariatur molestiae in maxime. Animi quae vitae in inventore. Totam mollitia aspernatur provident veniam aperiam placeat impedit! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem natus nobis, dolorum nam excepturi iure autem nemo ducimus temporibus facere, est eum voluptatem, culpa optio fugit assumenda quod? Praesentium.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, laudantium ullam, iure distinctio officia libero voluptatem obcaecati vero deleniti minima nemo itaque alias nisi eveniet soluta architecto quae laboriosam unde.</p>
+                    <h2>Мы всегда заботимся <br> о наших пациентах</h2>
+                    <p>
+                        С регулярным гигиеническим лечением и удалением зубного камня мы можем предотвратить или устранить следующие стоматологические заболевания
+                    </p>
                 </div>
             </div>
         </div>
@@ -43,67 +44,27 @@
             <div class="col-lg-12 col-12">
                 <div class="row">
 
-                    <div class="col-lg-6 col-md-6 col-12">
+                    {% for item in view_list_service %}
                         <!-- Single Blog -->
+                    <div class="col-sm col-12">
                         <div class="single-news">
                             <div class="news-head">
-                                <img src="https://via.placeholder.com/560x370" alt="#">
+                                <img class="service_img" src="{{ item.img_path }}" alt="{{ item.title }}">
                             </div>
                             <div class="news-body">
                                 <div class="news-content">
-                                    <div class="date">22 Aug, 2020</div>
-                                    <h2><a href="{% url 'blog_single' %}">We have annnocuced our new product.</a></h2>
-                                    <p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
+                                    <h2><a href="{{ item.url_name }}">{{ item.title }}</a></h2>
+                                    <p class="text">{{ item.decription }}</p>
                                 <div class="button article">
-                                    <a href="{% url 'blog_single' %}" class="btn">Подробнее</a>
+                                    <a href="{{ item.url_name }}" class="btn">Подробнее</a>
                                 </div>
 
                                 </div>
                             </div>
                         </div>
+                    </div>
                         <!-- End Single Blog -->
-                    </div>
-
-                     <div class="col-lg-6 col-md-6 col-12">
-                        <!-- Single Blog -->
-                        <div class="single-news">
-                            <div class="news-head">
-                                <img src="https://via.placeholder.com/560x370" alt="#">
-                            </div>
-                            <div class="news-body">
-                                <div class="news-content">
-                                    <div class="date">22 Aug, 2020</div>
-                                    <h2><a href="{% url 'blog_single' %}">We have annnocuced our new product.</a></h2>
-                                    <p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
-                                <div class="button article">
-                                    <a href="{% url 'blog_single' %}" class="btn">Подробнее</a>
-                                </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Single Blog -->
-                    </div>
-<!-- Single Blog -->
-                    <div class="col-lg-6 col-md-6 col-12">
-                        <div class="single-news">
-                            <div class="news-head">
-                                <img src="https://via.placeholder.com/560x370" alt="#">
-                            </div>
-                            <div class="news-body">
-                                <div class="news-content">
-                                    <div class="date">22 Aug, 2020</div>
-                                    <h2><a href="{% url 'blog_single' %}">We have annnocuced our new product.</a></h2>
-                                    <p class="text">Lorem ipsum dolor a sit ameti, consectetur adipisicing elit, sed do eiusmod tempor incididunt sed do incididunt sed.</p>
-                                <div class="button article">
-                                    <a href="{% url 'blog_single' %}" class="btn">Подробнее</a>
-                                </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
- <!-- End Single Blog -->
+                    {% endfor %}
                 </div>
             </div>
 

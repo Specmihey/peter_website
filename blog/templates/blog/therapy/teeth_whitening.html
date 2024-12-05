@@ -4,7 +4,26 @@
  {% block content %}
 
 {% block breadcrumbs %}
-   {% include "sections/breadcrumbs.html" %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>{{ super_title }}</h2>
+                    <ul class="bread-list">
+                        <li><a href="{% url 'home' %}">Главная</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+						<li><a href="{% url 'aesthetic_dentistry' %}">Эстетическая стоматология</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+                        <li class="active">{{ title }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
 {% endblock breadcrumbs %}
 
 		<section class="section">
@@ -124,10 +143,10 @@
 </p>
 <h3>Что входит в комплект для домашнего отбеливания зубов?</h3>
 	<ul>
-		<li><i class="fa fa-check fa-2x"></i> Индивидуальные каппы для отбеливания зубов, изготовленные по слепку</li>
-		<li><i class="fa fa-check fa-2x"></i> Средство для отбеливания зубов</li>
-		<li><i class="fa fa-check fa-2x"></i> Инструкция по применению, содержащая все инструкции по отбеливанию зубов.</li>
-		<li><i class="fa fa-check fa-2x"></i> Коробка</li>
+		<li><i class="icofont-tick-mark"></i> Индивидуальные каппы для отбеливания зубов, изготовленные по слепку</li>
+		<li><i class="icofont-tick-mark"></i> Средство для отбеливания зубов</li>
+		<li><i class="icofont-tick-mark"></i> Инструкция по применению, содержащая все инструкции по отбеливанию зубов.</li>
+		<li><i class="icofont-tick-mark"></i> Коробка</li>
 	</ul>
 	<p>
 		Конечно, когда вы получите набор в офисе, ваш стоматолог также объяснит процесс отбеливания зубов в домашних условиях. Продолжительность отбеливания индивидуальна в каждом случае, в среднем занимает 10 дней, минимум 3 часа процедуры в день, в зависимости от желаемого результата.

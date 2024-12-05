@@ -17,14 +17,14 @@
 						<!-- Single Team -->
 						<div class="single-team">
 							<div class="t-head">
-								<img src="{{ item.url_name }}" alt="#">
+								<img src="{{ item.img_name }}" alt="{{ title }}">
 								<div class="t-icon">
-									<a href="{% url 'Dr_Nyorba_Peter' %}" class="btn">Подробнее</a>
+									<a href="{{ item.url_name }}" class="btn">Подробнее</a>
 								</div>
 							</div>
 							<div class="t-bottom">
 								<p>{{ item.ships_crew }}</p>
-								<h2><a href="{% url 'Dr_Nyorba_Peter' %}">{{ item.name }}</a></h2>
+								<h2><a href="{{ item.url_name }}">{{ item.title }}</a></h2>
 							</div>
 						</div>
 						<!-- End Single Team -->
