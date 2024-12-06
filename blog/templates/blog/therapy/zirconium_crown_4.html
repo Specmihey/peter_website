@@ -1,0 +1,141 @@
+ {% extends 'blog/base.html' %}
+ {% load static %}
+
+ {% block content %}
+
+{% block breadcrumbs %}
+<!-- Breadcrumbs -->
+<div class="breadcrumbs overlay">
+    <div class="container">
+        <div class="bread-inner">
+            <div class="row">
+                <div class="col-12">
+                    <h2>{{ super_title }}</h2>
+                    <ul class="bread-list">
+                        <li><a href="{% url 'home' %}">Главная</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+						<li><a href="{% url 'korona' %}">Коронки</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+                        <li class="active">{{ title }}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+{% endblock breadcrumbs %}
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!--  Inner -->
+<div class="row">
+	<div class="col-lg-8">
+
+			<h2>Каковы преимущества циркониевой коронки? </h2>
+<p>
+	Цирконий обладает множеством полезных свойств, таких как биосовместимость и естественный вид, что делает его привлекательным для многих.
+    Каждый случай уникален, поэтому стоматолог всегда решает, какое решение подходит конкретному пациенту.
+    В любом случае можно сказать, что циркониевый диоксид может быть хорошим вариантом для практически любого зубного протезирования.
+    Вот несколько причин, почему он оказался лучше, чем металлы, применяемые в зубных протезах:
+</p>
+        <h3>Преимущества циркониевой коронки:</h3>
+<ul class="list">
+    <li><i class="fa fa-check fa-2x"></i> Высокое качество.</li>
+    <li><i class="fa fa-check fa-2x"></i> Особенно рекомендуется для передней зоны благодаря идеальной эстетике.</li>
+    <li><i class="fa fa-check fa-2x"></i> Без аллергенов.</li>
+    <li><i class="fa fa-check fa-2x"></i> Подходит для жевательных зубов благодаря прочности материала.</li>
+    <li><i class="fa fa-check fa-2x"></i> Устойчив к износу.</li>
+    <li><i class="fa fa-check fa-2x"></i> Не ощущается металлический привкус.</li>
+    <li><i class="fa fa-check fa-2x"></i> 100% биосовместим.</li>
+</ul>
+
+	</div>
+
+	<div class="col-lg-4">
+
+			<img src="{% static '/blog/img/service/corona/cirkonium-korona-dentistry-dental-crowns-zirconia-zirconium-crown-turkey-4.jpg' %}" alt="Врач обследует пациента">
+
+	</div>
+
+</div>
+
+<br>
+{% include "sections/button-center.html" %}
+	<br>
+<div class="row">
+		<div class="col-lg-4">
+
+			<img class="float-left" src="{% static '/blog/img/consult/fogaszati-konzultacio-dentist-examining-female-patient-with-tools-2.jpg' %}" alt="Открытый рот пациента">
+
+	</div>
+	<div class="col-lg-8">
+
+			<h3>Когда рекомендуется циркониевая коронка?</h3>
+<p>Циркониевая коронка рекомендуется в следующих случаях:</p> <br>
+			<ul class="list">
+				<li><i class="fa fa-check fa-2x"></i> На зубные имплантаты.</li>
+				<li><i class="fa fa-check fa-2x"></i> При восстановлении зуба.</li>
+				<li><i class="fa fa-check fa-2x"></i> При восстановлении сломанных коронок.</li>
+				<li><i class="fa fa-check fa-2x"></i> При замене старых коронок.</li>
+				<li><i class="fa fa-check fa-2x"></i> При эстетическом восстановлении зубов.</li>
+				<li><i class="fa fa-check fa-2x"></i> Для изготовления мостов.</li>
+			</ul>
+			<br>
+
+	</div>
+</div>
+
+{% include "sections/button-center.html" %}
+						<br>
+<div class="row">
+	<div class="col-lg-8">
+		<div class="department-left ol_article">
+			<h3>Консультация и план лечения</h3>
+<p>
+    Во время консультации и оценки состояния зубов мы предложим вам наиболее подходящее решение с учетом всех факторов.
+    Если циркониевая коронка окажется наиболее подходящей, в вашем предложении и плане лечения будет содержаться информация о графике лечения.
+</p>
+			<h3>Этапы лечения</h3>
+<ol>
+    <li>Подготовка зуба(ов).</li>
+    <li>Снятие слепков.</li>
+    <li>Примерка каркаса.</li>
+    <li>Примерка без глазури настройка.</li>
+    <li>Окончательное закрепление.</li>
+</ol>
+<p>
+    <strong>
+    Вечный вопрос — что выбрать: металлическую керамическую коронку, безметалловую циркониевую керамику или, возможно, прессованную керамику?
+    </strong>
+</p>
+ <p>
+     Металлокерамические коронки все чаще выбираются только для задней, жевательной зоны, где их прочность и отличное соотношение цены и качества делают их особенно рекомендуемыми.
+ </p>
+<p>
+    Еще одно различие заключается в том, что у металлических каркасных коронок может появляться серый ободок на шейке зуба и краю десны, в то время как циркониевые керамические коронки этого недостатка лишены. Из-за эстетических различий мы в первую очередь рекомендуем циркониевые керамические коронки для заметной передней зоны, а для восстановления одиночных коронок — прессованные керамические коронки, обладающие еще более выдающимися эстетическими показателями.
+</p>
+		</div>
+	<br>
+
+	</div>
+
+	<div class="col-lg-4">
+		<div class="department-right">
+			<img src="{% static '/blog/img/service/corona/femkeramia-korona-korona-preskeramia-paciens-6.jpg' %}" alt="#">
+		</div>
+	</div>
+</div>
+						<br>
+						{% include "sections/button-center.html" %}
+						<!--/ End Inner -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End  Page -->
+
+
+{% endblock content %}

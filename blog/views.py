@@ -125,7 +125,7 @@ doctors_grig = [
     {'title': 'Toth Viktoria', 'ships_crew': 'Ассистентка ', 'img_name': '/static/blog/img/doctors/Toth_Viktoria.jpg', 'url_name': 'Toth_Viktoria'},
     {'title': 'Farkas Fanni', 'ships_crew': 'Ассистентка ', 'img_name': '/static/blog/img/doctors/Farkas_Fanni.jpg', 'url_name': 'Farkas_Fanni'},
     {'title': 'Dr. Aydin Yazdizadeh', 'ships_crew': ' Врач-стоматолог-хирург', 'img_name': '/static/blog/img/doctors/Dr_Aydin_Yazdizadeh.jpg', 'url_name': 'Dr_Aydin_Yazdizadeh'},
-    {'title': 'Dr. Ali Fatemi', 'ships_crew': 'Эндодонтист ', 'img_name': '/static/blog/img/doctors/Dr_Ali_Fatemi.jpg', 'url_name': 'Dr_Ali_Fatemi '},
+    {'title': 'Dr. Ali Fatemi', 'ships_crew': 'Эндодонтист ', 'img_name': '/static/blog/img/doctors/Dr_Ali_Fatemi.jpg', 'url_name': 'Dr_Ali_Fatemi'},
 ]
 def doctors(request):
    context={
@@ -211,21 +211,15 @@ def Dr_Ali_Fatemi(request):
    return render(request, 'blog/doctors/Dr_Ali_Fatemi.html', context=context)
 
 # ------------------------------- Лечение
-view_list_service = [
-    {'title': 'Отбеливание зубов', 'img_path': '/static/blog/img/teeth/smile_400_300.jpg', 'url_name': 'http://127.0.0.1:8000/service/aesthetic-dentistry/teeth-whitening/', 'decription': 'Ваши зубы изменили цвет и пятна, и из-за этого вы не смеете улыбаться? Мы поможем вам с вашей проблемой!'},
-    {'title': 'Удаление зубного камня', 'img_path': '/static/blog/img/teeth/del_1_400_300.jpg', 'url_name': 'http://127.0.0.1:8000/service/aesthetic-dentistry/removal-tartar/', 'decription': 'Когда рекомендуется приступать к удалению зубного камня?'},
-    {'title': 'Прессованная керамическая оболочка E.max', 'img_path': '/static/blog/img/teeth/press_2_400_300.jpg', 'url_name': 'http://127.0.0.1:8000/service/aesthetic-dentistry/pressed-ceramic-shell/', 'decription': 'Исправить эстетические недостатки зубов'},
+view_list_aesthetic_dentistry = [
+    {'title': 'Отбеливание зубов', 'img_path': '/static/blog/img/teeth/smile_400_300.jpg',
+     'url_name': 'teeth_whitening', 'decription': 'Ваши зубы изменили цвет и пятна, и из-за этого вы не смеете улыбаться? Мы поможем вам с вашей проблемой!'},
+    {'title': 'Удаление зубного камня', 'img_path': '/static/blog/img/teeth/del_1_400_300.jpg',
+     'url_name': 'removal_tartar', 'decription': 'Когда рекомендуется приступать к удалению зубного камня?'},
+    {'title': 'Прессованная керамическая оболочка E.max', 'img_path': '/static/blog/img/teeth/press_2_400_300.jpg',
+     'url_name': 'pressed_ceramic_shell_e_max', 'decription': 'Исправить эстетические недостатки зубов'},
     #{'title': '', 'img_path': '', 'url_name': '', 'decription': ''},
 ]
-def service(request):
-   context={
-       'title': 'Услуги клиники',
-       'super_title': 'Услуги клиники',
-       'description': 'Стоматологическая клиника Digital Dental Art',
-       'based': based,
-       'view_list_service': view_list_service,
-   }
-   return render(request, 'blog/therapy/service.html', context=context)
 
 def consultation(request):
    context={
@@ -242,7 +236,7 @@ def aesthetic_dentistry(request):
        'super_title': 'Услуги клиники',
        'description': 'Стоматологическая клиника Digital Dental Art',
        'based': based,
-       'view_list_service': view_list_service,
+       'view_list_aesthetic_dentistry': view_list_aesthetic_dentistry,
    }
    return render(request, 'blog/therapy/aesthetic_dentistry.html', context=context)
 
@@ -273,3 +267,61 @@ def pressed_ceramic_shell_e_max(request):
    }
    return render(request, 'blog/therapy/pressed_ceramic_shell.html', context=context)
 
+# korona
+view_list_korona = [
+    {'title': 'Керамическая коронка E.Max', 'img_path': '/static/blog/img/service/corona/cirkonium-korona-teeth-whitening_1.jpg',
+     'url_name': 'e_max_ceramic_crown', 'decription': 'Когда рекомендуется использовать прессованную керамическую коронку?'},
+    {'title': 'Циркониевая коронка', 'img_path': '/static/blog/img/service/corona/preskeramia-korona-emax_3.jpg',
+     'url_name': 'zirconium_crown', 'decription': 'Каковы преимущества циркониевой коронки?'},
+    {'title': 'Металлокерамическая коронка', 'img_path': '/static/blog/img/service/corona/femkeramia-korona-femkeramia-korona-fogpotlas-femporc-8.jpg',
+     'url_name': 'ceramic_metal_crown', 'decription': 'Когда рекомендуется металлическая керамическая коронка?'},
+    #{'title': '', 'img_path': '', 'url_name': '', 'decription': ''},
+]
+def korona(request):
+   context={
+       'title': 'korona',
+       'super_title': 'korona',
+       'description': 'Когда рекомендуется использовать прессованную керамическую коронку?',
+       'based': based,
+       'view_list_korona': view_list_korona,
+   }
+   return render(request, 'blog/therapy/korona.html', context=context)
+
+def e_max_ceramic_crown(request):
+   context={
+       'title': 'Керамическая коронка E.Max',
+       'super_title': 'Когда рекомендуется использовать прессованную керамическую коронку?',
+       'description': 'Когда рекомендуется использовать прессованную керамическую коронку?',
+       'based': based,
+   }
+   return render(request, 'blog/therapy/e_max_ceramic_crown_3.html', context=context)
+
+def zirconium_crown(request):
+   context={
+       'title': 'Циркониевая коронка',
+       'super_title': 'Каковы преимущества циркониевой коронки?',
+       'description': 'Каковы преимущества циркониевой коронки?',
+       'based': based,
+   }
+   return render(request, 'blog/therapy/zirconium_crown_4.html', context=context)
+
+def ceramic_metal_crown(request):
+   context={
+       'title': 'Металлокерамическая коронка',
+       'super_title': 'Когда рекомендуется металлическая керамическая коронка?',
+       'description': 'Когда рекомендуется металлическая керамическая коронка?',
+       'based': based,
+   }
+   return render(request, 'blog/therapy/ceramic_metal_crown_5.html', context=context)
+
+
+# --- Лечение общий список
+def service(request):
+   context={
+       'title': 'Услуги клиники',
+       'super_title': 'Услуги клиники',
+       'description': 'Стоматологическая клиника Digital Dental Art',
+       'based': based,
+       'view_list_aesthetic_dentistry': view_list_aesthetic_dentistry,
+   }
+   return render(request, 'blog/therapy/service.html', context=context)

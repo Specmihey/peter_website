@@ -32,10 +32,16 @@ urlpatterns = [
     # Treatment unit -- Блок лечения
     path('service/', service, name='service'), # Лечение
     path('service/consultation/', consultation, name='consultation'), # Консультация
+    # эстетическая стоматология
     path('service/aesthetic-dentistry/', aesthetic_dentistry, name='aesthetic_dentistry'), # эстетическая стоматология
     path('service/aesthetic-dentistry/teeth-whitening/', teeth_whitening, name='teeth_whitening'), # Отбеливание зубов
     path('service/aesthetic-dentistry/removal-tartar/', removal_tartar, name='removal_tartar'), # Удаление зубного камня
     path('service/aesthetic-dentistry/pressed-ceramic-shell/', pressed_ceramic_shell_e_max, name='pressed_ceramic_shell_e_max'), # Прессованная керамическая оболочка E.max
+    # Короны
+    path('service/korona/', korona, name='korona'), # korona
+    path('service/korona/e_max_ceramic_crown', e_max_ceramic_crown, name='e_max_ceramic_crown'), # Керамическая коронка E.Max
+    path('service/korona/zirconium-crown', zirconium_crown, name='zirconium_crown'), # Циркониевая коронка
+    path('service/korona/ceramic-metal-crown', ceramic_metal_crown, name='ceramic_metal_crown'), # Металлокерамическая коронка
 
 ]
 

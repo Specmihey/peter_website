@@ -33,10 +33,15 @@
     max-width: 100%;
     height: auto;
  }
+ /* смещение кнопки Записаться вниз */
  .padding-top-35px {
  padding-top: 35px;
  }
+
 .service_img {
     height: 210px !important;
     }
-
+/* ol смещение нумерованного списка */
+.ol_article ol {
+    margin-left: 25px !important;
+    }

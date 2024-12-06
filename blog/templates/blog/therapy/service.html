@@ -44,7 +44,7 @@
             <div class="col-lg-12 col-12">
                 <div class="row">
 
-                    {% for item in view_list_service %}
+                    {% for item in view_list_aesthetic_dentistry %}
                         <!-- Single Blog -->
                     <div class="col-sm col-12">
                         <div class="single-news">
@@ -53,10 +53,10 @@
                             </div>
                             <div class="news-body">
                                 <div class="news-content">
-                                    <h2><a href="{{ item.url_name }}">{{ item.title }}</a></h2>
+                                    <h2><a href="{% url item.url_name %}">{{ item.title }}</a></h2>
                                     <p class="text">{{ item.decription }}</p>
                                 <div class="button article">
-                                    <a href="{{ item.url_name }}" class="btn">Подробнее</a>
+                                    <a href="{% url item.url_name %}" class="btn">Подробнее</a>
                                 </div>
 
                                 </div>
