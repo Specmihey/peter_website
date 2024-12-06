@@ -126,8 +126,28 @@ STATICFILES_DIRS = [
    os.path.join(BASE_DIR, "static"),
 ]
 
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Если Debug не появляется, то применить следующий код
+import mimetypes
+
+mimetypes.add_type("application/javascript", ".js", True)
+
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+
+
+def show_toolbar(request):
+    return True
+
+DEBUG_TOOLBAR_CONFIG = {
+    'INTERCEPT_REDIRECTS': False,
+    "SHOW_TOOLBAR_CALLBACK": show_toolbar,
+    'INSERT_BEFORE': '</head>',
+    'INTERCEPT_REDIRECTS': False,
+    'RENDER_PANELS': True,
+}
