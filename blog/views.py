@@ -1,6 +1,14 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, redirect, get_object_or_404
+from .models import *
+from .forms import *
+#для отправки с вложением
+from django.core.mail import EmailMessage
+from django.contrib import messages
+
+from django.core.paginator import Paginator
+
 
 # Common variables.
 based = {'title': 'DNP Dental',
@@ -315,7 +323,7 @@ def ceramic_metal_crown(request):
    return render(request, 'blog/therapy/ceramic_metal_crown_5.html', context=context)
 
 
-# --- Лечение общий список
+# --- Лечение общий список ???
 def service(request):
    context={
        'title': 'Услуги клиники',
@@ -325,3 +333,39 @@ def service(request):
        'view_list_aesthetic_dentistry': view_list_aesthetic_dentistry,
    }
    return render(request, 'blog/therapy/service.html', context=context)
+
+# --- Вывод статей блога
+
+def blog_list(request):
+    posts = PageItem.objects.all()
+    paginator = Paginator(posts, 5)  # Show 5 contacts per page.
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    category_list = Category.objects.all()
+    review_category_list = Category.objects.all()
+    excellence = Category.objects.all()
+    context = {
+        'posts': posts,
+        'category_list': category_list,
+        'title': 'Блог клиники',
+        'description': 'Блог стоматологической клиники Digital Dental Art.',
+        'based': based,
+        'page_obj': page_obj,
+        'review_category_list': review_category_list,
+        'excellence': excellence,
+    }
+    return render(request, 'blog/articles/blog-grid.html', context=context)
+
+
+def show_post(request, post_slug):
+    post = get_object_or_404(PageItem, slug=post_slug)
+    context = {
+        'title': post.title,
+        'description': post.description,
+        'based': based,
+        'post':post,
+    }
+    return render(request, 'blog/articles/blog-single.html', context=context)
+
+
+

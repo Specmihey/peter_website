@@ -14,7 +14,7 @@
                     <ul class="bread-list">
                         <li><a href="{% url 'home' %}">Главная</a></li>
                         <li><i class="icofont-simple-right"></i></li>
-                        <li><a href="{% url 'blog_grid' %}">Блог</a></li>
+                        <li><a href="{% url 'blog' %}">Блог</a></li>
                         <li><i class="icofont-simple-right"></i></li>
                         <li class="active">{{ title }}</li>
                     </ul>
@@ -34,11 +34,9 @@
                     <div class="col-12">
                         <div class="single-main">
                             <!-- News Head -->
-                            <div class="news-head">
-                                <img src="{% static '/blog/img/professzionalis-mosolytervezes-cosmetic-dentistry.jpg' %}" alt="#">
-                            </div>
+
                             <!-- News Title -->
-                            <h1 class="news-title">More than 80 clinical trials launch to test of the coronavirus .</h1>
+                            <h1 class="news-title">{{ title }}</h1>
                             <!-- Meta -->
                             <div class="meta">
                                 <div class="meta-left">
@@ -49,25 +47,10 @@
                             </div>
                             <!-- News Text -->
                             <div class="news-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam.</p>
-                                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commod</p>
-                                <div class="image-gallery">
-                                    <div class="row">
-                                            <div class="col-6">
-                                                <img class="img-responsive" src="{% static '/blog/img/boglarka-580x580.jpg' %}" alt="#">
-                                            </div>
-                                            <div class="col-6">
-                                                <img src="{% static '/blog/img/testi-bg.jpg' %}" alt="#">
-                                            </div>
+                                {% autoescape off %}
+                                {{post.content}}
+                                {% endautoescape %}
 
-                                    </div>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam.</p>
-                                <blockquote class="overlay">
-                                    <p>Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commodo et, sodales</p>
-                                </blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse porttitor nunc a sodales tempor. Mauris sed felis maximus, interdum metus vel, tincidunt diam. Nam ac risus vitae sem vehicula egestas. Sed velit nulla, viverra non commodo et, sodales id dui.</p>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse facilisis ultricies tortor, nec sollicitudin lorem sagittis vitae. Curabitur rhoncus commodo rutrum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam nec lacus pulvinar, laoreet dolor quis, pellentesque ante. Cras nulla orci, pharetra at dictum consequat, pretium pretium nulla. Suspendisse</p>
                             </div>
 
                         </div>

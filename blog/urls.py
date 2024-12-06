@@ -27,8 +27,10 @@ urlpatterns = [
     path('mail-success/', mail_success, name='mail_success'), # mail-success
     path('privacy_policy/', privacy_policy, name='privacy_policy'), #privacy_policy
     # Articles -- Блок статей
-    path('blog-grid/', blog_grid, name='blog_grid'), # Блог, каталог статей
-    path('blog-grid/blog-single/', blog_single, name='blog_single'), # Блог, одна статья
+    # path('blog-grid/', blog_grid, name='blog_grid'), # Блог, каталог статей
+    # path('blog-grid/blog-single/', blog_single, name='blog_single'), # Блог, одна статья
+    path('blog/', blog_list, name='blog'),
+    path('blog/<slug:post_slug>/', show_post, name='post'),
     # Treatment unit -- Блок лечения
     path('service/', service, name='service'), # Лечение
     path('service/consultation/', consultation, name='consultation'), # Консультация

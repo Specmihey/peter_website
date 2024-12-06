@@ -130,7 +130,7 @@
                                             <li><a href="{% url 'appointment' %}">Записаться на прием</a></li>
                                         </ul>
                                     </li>
-                                    <li {% if '/blog-grid/' in request.path %}class="active"{% endif %}><a href="{% url 'blog_grid' %}">Блог</i></a>
+                                    <li {% if '/blog-grid/' in request.path %}class="active"{% endif %}><a href="{% url 'blog' %}">Блог</i></a>
                                     </li>
                                     <li {% if request.resolver_match.url_name == 'contact' %}class="active"{% endif %}><a href="{% url 'contact' %}">Контакты</a></li>
                                 </ul>
