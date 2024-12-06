@@ -29,6 +29,7 @@ def index(request):
        'title': 'Стоматологическая клиника Digital Dental Art',
        'description': 'Стоматологическая клиника Digital Dental Art',
        'based': based,
+       'doctors_grig': doctors_grig,
 
    }
    return render(request, 'blog/index.html', context=context)
