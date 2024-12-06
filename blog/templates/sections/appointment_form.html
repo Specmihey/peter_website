@@ -63,26 +63,20 @@
                 <textarea name="message" placeholder="Напишите Ваше сообщение здесь....."></textarea>
             </div>
         </div>
-    <div class="row">
-        <div class="col-12">
-            <div class="form-group">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                  <label class="form-check-label" for="inlineCheckbox1">Я принимаю Уведомление о конфиденциальности.</label>
+
+
+            <div class="col-lg-12 col-md-12 col-12">
+                    <div class="button  col text-center">
+                        <button type="submit" name="submit" class="btn">Отправить</button>
+                    </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-12">
+                <div class="form-group col text-center">
+                          <label class="serv">
+                            <input type="checkbox" value="remember-me"> Я принимаю <a href="{% url 'privacy_policy' %}">Уведомление о конфиденциальности</a>.
+                          </label>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-    <div class="row">
-        <div class="col-12">
-            <div class="form-group">
-                <div class="button">
-                    <button type="submit" name="submit" class="btn">Отправить</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+</div>
 </form>
