@@ -101,7 +101,7 @@ def appointment(request):
 def mail_success(request):
    context={
        'title': 'Ваше сообщение отправлено',
-       'super_title': 'Записаться на прием',
+       'super_title': 'Ваше сообщение отправлено',
        'description': 'Записаться на прием к врачу клиники Digital Dental Art',
        'based': based,
    }

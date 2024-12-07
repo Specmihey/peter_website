@@ -1,11 +1,13 @@
-
+/* размер Logo */
 .logo_mine {
     height: auto;
     max-width: 45%;
 }
+/* Цвет текста внутри кнопки принудительно */
 .article .btn {
     color: white !important;
 }
+/* стиль кнопки */
 .app_btn .btn {
     color: #fff;
     padding-left: 35px;
@@ -19,7 +21,7 @@
     font-size: revert;
     padding-bottom: 10px;
 }
-
+/* подсветка ссылок внутри div */
 .serv a {
 	text-decoration:underline !important;
     font-style: italic !important;
@@ -37,7 +39,7 @@
  .padding-top-35px {
  padding-top: 35px;
  }
-
+/* размер изображения - вывод из каталога */
 .service_img {
     height: 210px !important;
     }
@@ -45,3 +47,7 @@
 .ol_article ol {
     margin-left: 25px !important;
     }
+/* смещение check вниз на 10px for appointment_form.html*/
+.check_box {
+margin-top: 10px;
+}
