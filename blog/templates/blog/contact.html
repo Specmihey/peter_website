@@ -24,7 +24,44 @@
                         <h2>Напишите нам</h2>
                         <p>Пожалуйста, напишите нам, когда вам удобно, и мы свяжемся с вами.</p>
                         <!-- Form -->
-                        {% include "sections/appointment_form.html" %}
+								<form class="form" action="{% url 'contact' %}" method="post" enctype="multipart/form-data">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="name" placeholder="Имя" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="email" name="email" placeholder="Email" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="phone" placeholder="Телефон" required="">
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<input type="text" name="subject" placeholder="Направление лечения" required="">
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<textarea name="message" placeholder="Ваше сообщение" required=""></textarea>
+											</div>
+										</div>
+										<div class="col-12">
+											<div class="form-group login-btn">
+												<button class="btn" type="submit">Send</button>
+											</div>
+											<div class="checkbox">
+												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Я принимаю
+                                                    <a href="#">Уведомление о конфиденциальности.</a></label>
+											</div>
+										</div>
+									</div>
+								</form>
                         <!--/ End Form -->
                     </div>
                 </div>
@@ -38,7 +75,7 @@
                         <i class="icofont icofont-ui-call"></i>
                         <div class="content">
                             <h3>{{ based.phone }}</h3>
-                            <p>{{ bbased.email }}</p>
+                            <p>{{ based.email }}</p>
                         </div>
                     </div>
                 </div>
