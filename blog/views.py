@@ -89,6 +89,52 @@ def contact(request):
    }
    return render(request, 'blog/contact.html', context=context)
 
+# def contact(request):
+#     # отображение формы, с предыдущим заполнением
+#     if request.method == 'POST':
+#         form = ContactForm(request.POST)
+#         if form.is_valid():
+#             #print(form.cleaned_data)
+#             subject = 'Форма связи с сайта DNP'
+#             name = form.cleaned_data['name']
+#             phone = form.cleaned_data['phone_number']
+#             treatment = form.cleaned_data['treatment_type']
+#             content = form.cleaned_data['content']
+#             from_email = form.cleaned_data['from_email']
+#             message = (f'<p><strong>Имя:</strong>{name}</p> '
+#                        f'<p><strong>Телефон:</strong> {phone}</p> '
+#                        f'<p>{treatment}</p>'
+#                        f'<p><strong>Сообщение:</strong> {content} </p> '
+#                        f'<p><strong>From email:</strong> {from_email}</p>')
+#
+#
+#             mail = EmailMessage(subject, message, 'estetm2014@yandex.ru', ['specmihey@gmail.com',])
+#             mail.content_subtype = 'html'
+#
+#             try:
+#                 file = request.FILES['file']
+#                 mail.attach(file.name, file.read(), file.content_type)
+#             except:
+#                 pass
+#
+#             mail.send()
+#
+#             if mail:
+#                 messages.success(request, 'Письмо отправлено')
+#                 return redirect('contact')
+#             else:
+#                 messages.error(request, 'Ошибка отправки')
+#     else:
+#         form = ContactForm()
+#
+#     context = {
+#         'title': 'Записаться на прием',
+#         'super_title': 'Записаться на прием',
+#         'description': 'Записаться на прием к врачу клиники Digital Dental Art',
+#         'based': based,
+#     }
+#     return render(request, 'blog/appointment.html', context=context)
+
 def appointment(request):
    context={
        'title': 'Записаться на прием',

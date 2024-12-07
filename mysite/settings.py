@@ -157,8 +157,8 @@ DEBUG_TOOLBAR_CONFIG = {
 # ----- Для отправки писем
 # EMAIL_HOST = 'mail.post.europa-dental.ru'
 # EMAIL_PORT = '465' #2525
-# EMAIL_HOST_USER = 'info@post.europa-dental.ru' #логин доступа к почте
-# EMAIL_HOST_PASSWORD = 'wO2sW8eT1r'
+# EMAIL_HOST_USER = 'estetm2014@yandex.ru' #логин доступа к почте
+# EMAIL_HOST_PASSWORD = '81S0Wi0dIvjB8PkN'
 # EMAIL_USE_TLS = False
 # EMAIL_USE_SSL = True
 
