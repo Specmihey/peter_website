@@ -80,6 +80,15 @@ def privacy_policy(request):
    }
    return render(request, 'blog/privacy_policy.html', context=context)
 
+def warranty(request):
+   context={
+       'title': 'Гарантии',
+       'super_title': 'Гарантии стоматологической клиники',
+       'description': 'Гарантии стоматологической клиники Digital Dental Art',
+       'based': based,
+   }
+   return render(request, 'blog/warranty.html', context=context)
+
 def contact(request):
    context={
        'title': 'Контакты клиники',

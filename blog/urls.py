@@ -20,12 +20,13 @@ urlpatterns = [
     # About clinic -- О клинике
     path('price/', price, name='price'), #price
     path('about-clinic/', about_clinic, name='about-clinic'), #о клинике
-    path('faq/', faq, name='faq'), #FAQ
+    # path('faq/', faq, name='faq'), #FAQ
     path('time_table/', time_table, name='time_table'), #time_table
     path('appointment/', appointment, name='appointment'), # Записаться на прием
     path('contact/', contact, name='contact'), # contact
     path('mail-success/', mail_success, name='mail_success'), # mail-success
     path('privacy_policy/', privacy_policy, name='privacy_policy'), #privacy_policy
+    path('warranty/', warranty, name='warranty'), # warranty.html
     # Articles -- Блок статей
     # path('blog-grid/', blog_grid, name='blog_grid'), # Блог, каталог статей
     # path('blog-grid/blog-single/', blog_single, name='blog_single'), # Блог, одна статья

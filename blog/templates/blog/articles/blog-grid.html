@@ -22,7 +22,7 @@
                             </div>
                             <div class="news-body">
                                 <div class="news-content">
-                                    <div class="date">22 Aug, 2020</div>
+                                    <div class="date">{{p.time_created}}</div>
                                     <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
                                     <p class="text">{{ p.description | linebreaks }}</p>
                                 <div class="button article">
