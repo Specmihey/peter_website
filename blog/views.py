@@ -379,6 +379,23 @@ def ceramic_metal_crown(request):
    }
    return render(request, 'blog/therapy/ceramic_metal_crown_5.html', context=context)
 
+def dental_bridge(request):
+   context={
+       'title': 'Зубной мост',
+       'super_title': 'Страдаете от отсутствия зубов и хотели бы быстро заменить отсутствующие зубы?',
+       'description': 'Страдаете от отсутствия зубов и хотели бы быстро заменить отсутствующие зубы?',
+       'based': based,
+   }
+   return render(request, 'blog/therapy/dental_bridge.html', context=context)
+
+def sealing(request):
+   context={
+       'title': 'Пломбирование',
+       'super_title': 'Преимущества эстетических композитных пломб',
+       'description': 'Преимущества эстетических композитных пломб',
+       'based': based,
+   }
+   return render(request, 'blog/therapy/sealing.html', context=context)
 
 # --- Лечение общий список ???
 def service(request):

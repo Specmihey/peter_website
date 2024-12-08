@@ -45,6 +45,10 @@ urlpatterns = [
     path('service/korona/e_max_ceramic_crown', e_max_ceramic_crown, name='e_max_ceramic_crown'), # Керамическая коронка E.Max
     path('service/korona/zirconium-crown', zirconium_crown, name='zirconium_crown'), # Циркониевая коронка
     path('service/korona/ceramic-metal-crown', ceramic_metal_crown, name='ceramic_metal_crown'), # Металлокерамическая коронка
+    #Зубной мост
+    path('dental-bridge/', dental_bridge, name='dental_bridge'), # dental_bridge
+    # Пломбирование
+    path('sealing/', sealing, name='sealing'), # sealing
 
 ]
 
