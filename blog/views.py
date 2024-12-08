@@ -394,8 +394,8 @@ def service(request):
 # --- Вывод статей блога
 
 def blog_list(request):
-    posts = PageItem.objects.all()
-    paginator = Paginator(posts, 5)  # Show 5 contacts per page.
+    posts = PageItem.objects.filter(is_published=True)
+    paginator = Paginator(posts, 3)  # Show 3 contacts per page.
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
     category_list = Category.objects.all()
@@ -411,11 +411,13 @@ def blog_list(request):
         'review_category_list': review_category_list,
         'excellence': excellence,
     }
+
     return render(request, 'blog/articles/blog-grid.html', context=context)
 
 
+
 def show_post(request, post_slug):
-    post = get_object_or_404(PageItem, slug=post_slug)
+    post = get_object_or_404(PageItem.objects.filter(is_published=True), slug=post_slug)
     context = {
         'title': post.title,
         'description': post.description,

@@ -6,15 +6,24 @@ from django.utils.safestring import mark_safe
 from django import forms
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
+# --- ckeditor add
 class PostAdminForm(forms.ModelForm):
     content = forms.CharField(widget=CKEditorUploadingWidget())
     class Meta:
         model = PageItem
         fields = '__all__'
-#ckeditor
 
+class DoctorAdminForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorUploadingWidget())
+    class Meta:
+        model = PageItem
+        fields = '__all__'
 
-
+class PatientsAdminForm(forms.ModelForm):
+    content = forms.CharField(widget=CKEditorUploadingWidget())
+    class Meta:
+        model = PageItem
+        fields = '__all__'
 
 # Register your models here.
 class CategoryAdmin(admin.ModelAdmin):
@@ -98,16 +107,19 @@ class PatientsAdmin(admin.ModelAdmin):
     search_fields = ('last_name', 'emails','reminder_days')
     list_editable = ('emails', 'phone','reminder_days')
     list_filter = ('last_name', 'phone','reminder_days')
+    form = PatientsAdminForm
 
 # === Doctor
 class DoctorAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'ships_crew', 'get_html_photo', 'created_at')
     list_display_links = ('id', 'title')
     search_fields = ('title', 'content')
+    form = DoctorAdminForm
 
     def get_html_photo(self, object):
         if object.photo:
             return mark_safe(f"<img src='{object.photo.url}' width=85")
+
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(PageItem, PageItemAdmin)
