@@ -183,13 +183,14 @@ def blog_single(request):
 # Вывод списка врачей -- Displaying a list of doctors
 doctors_grig = [
     {'title': 'Dr. Nyorba Peter', 'ships_crew': 'Медицинский руководитель', 'img_name': '/static/blog/img/doctors/Dr_Nyorba_Peter.jpg', 'url_name': 'Dr_Nyorba_Peter'},
+    {'title': 'Dr. Aydin Yazdizadeh', 'ships_crew': ' Врач-стоматолог-хирург', 'img_name': '/static/blog/img/doctors/Dr_Aydin_Yazdizadeh.jpg', 'url_name': 'Dr_Aydin_Yazdizadeh'}, {'title': 'Dr. Ali Fatemi', 'ships_crew': 'Эндодонтист ', 'img_name': '/static/blog/img/doctors/Dr_Ali_Fatemi.jpg', 'url_name': 'Dr_Ali_Fatemi'},
     {'title': 'Nyorba Peter', 'ships_crew': 'Финансовый директор', 'img_name': '/static/blog/img/doctors/Nyorba_Peter.jpg', 'url_name': 'Nyorba_Peter'},
     {'title': 'Mósa Rita Emese', 'ships_crew': 'Главная ассистентка', 'img_name': '/static/blog/img/doctors/Rita_Emese.jpg', 'url_name': 'Mosa_Rita_Emese'},
     {'title': 'Kiss Anna', 'ships_crew': 'Администратор', 'img_name': '/static/blog/img/doctors/Kiss_Anna.jpg', 'url_name': 'Kiss_Anna'},
     {'title': 'Toth Viktoria', 'ships_crew': 'Ассистентка ', 'img_name': '/static/blog/img/doctors/Toth_Viktoria.jpg', 'url_name': 'Toth_Viktoria'},
     {'title': 'Farkas Fanni', 'ships_crew': 'Ассистентка ', 'img_name': '/static/blog/img/doctors/Farkas_Fanni.jpg', 'url_name': 'Farkas_Fanni'},
-    {'title': 'Dr. Aydin Yazdizadeh', 'ships_crew': ' Врач-стоматолог-хирург', 'img_name': '/static/blog/img/doctors/Dr_Aydin_Yazdizadeh.jpg', 'url_name': 'Dr_Aydin_Yazdizadeh'},
-    {'title': 'Dr. Ali Fatemi', 'ships_crew': 'Эндодонтист ', 'img_name': '/static/blog/img/doctors/Dr_Ali_Fatemi.jpg', 'url_name': 'Dr_Ali_Fatemi'},
+
+
 ]
 def doctors(request):
    context={

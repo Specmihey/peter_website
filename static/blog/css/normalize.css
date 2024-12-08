@@ -235,7 +235,7 @@ big {
 h1,h2,h3,h4,h5,h6{
 	font-weight:normal;
 	color:#2C2D3F;
-	padding-top: 10px;
+	/*padding-top: 10px;*/
 }
 a,button{
 	-webkit-transition:all 0.3s ease;
@@ -627,8 +627,13 @@ hr {
 	height: 1px;
 	margin-bottom: 1.5em;
 }
+/* маркированный список -- bulleted list only for blog */
+.news-text ul, ul li{
+    list-style: revert-layer !important;
+	padding:0;
+}
 
-ul,ul li{
+ul, ul li{
 	list-style:none;
 	padding:0;
 }
