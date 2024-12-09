@@ -16,6 +16,10 @@
                         <li><a href="{% url 'service' %}">Лечение</a></li>
                         <li><i class="icofont-simple-right"></i></li>
 {% endif %}
+{% if '/denture/' in request.path %}
+                        <li><a href="{% url 'denture' %}">Протезы</a></li>
+                        <li><i class="icofont-simple-right"></i></li>
+{% endif %}
                         <li class="active">{{ title }}</li>
                     </ul>
                 </div>

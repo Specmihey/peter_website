@@ -49,7 +49,11 @@ urlpatterns = [
     path('dental-bridge/', dental_bridge, name='dental_bridge'), # dental_bridge
     # Пломбирование
     path('sealing/', sealing, name='sealing'), # sealing
-
+    # Протезы
+    path('denture/', denture, name='denture'),  # denture list
+    path('denture/full_partial_removable_dentures/', full_partial_removable_dentures, name='full_partial_removable_dentures'),  # Полные/частичные съемные протезы
+    path('denture/rem_dentures_stab_implants/', rem_dentures_stab_implants, name='rem_dentures_stab_implants'),  # Съемные протезы, стабилизированные имплантатами
+    path('denture/temporary_denture/', temporary_denture, name='temporary_denture'),  # Временные протезы
 ]
 
 

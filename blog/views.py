@@ -397,6 +397,53 @@ def sealing(request):
    }
    return render(request, 'blog/therapy/sealing.html', context=context)
 
+# Протезы
+denture_list = [
+    {'title': 'Полные/частичные съемные протезы', 'img_path': '/static/blog/img/service/dentar/dentar_3jpg.jpg', 'url_name': 'full_partial_removable_dentures', 'decription': 'Полные/частичные съемные протезы'},
+    {'title': 'Съемные протезы, стабилизированные имплантатами.', 'img_path': '/static/blog/img/service/dentar/stab_implants_1jpg.jpg', 'url_name': 'rem_dentures_stab_implants', 'decription': 'Съемные протезы, стабилизированные имплантатами.'},
+    {'title': 'Временные протезы', 'img_path': '/static/blog/img/service/dentar/temporary_1jpg.jpg', 'url_name': 'temporary_denture', 'decription': 'Временная коронка, мост или временный съемный протез'},
+]
+def denture(request):
+   context={
+       'title': 'Протезы',
+       'super_title': 'Полные/частичные съемные протезы',
+       'description': 'Полные/частичные съемные протезы',
+       'based': based,
+       'denture_list': denture_list,
+
+   }
+   return render(request, 'blog/therapy/denture.html', context=context)
+
+
+def full_partial_removable_dentures(request):
+   context={
+       'title': 'Протезы',
+       'super_title': 'Полные/частичные съемные протезы',
+       'description': 'Полные/частичные съемные протезы',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/full_partial_removable_dentures.html', context=context)
+
+def rem_dentures_stab_implants(request):
+   context={
+       'title': 'Съемные протезы, стабилизированные имплантатами.',
+       'super_title': 'Съемные протезы, стабилизированные имплантатами.',
+       'description': 'Съемные протезы, стабилизированные имплантатами.',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/rem_dentures_stab_implants.html', context=context)
+
+def temporary_denture(request):
+   context={
+       'title': 'Временные протезы',
+       'super_title': 'Временная коронка, мост или временный съемный протез',
+       'description': 'Временная коронка, мост или временный съемный протез',
+       'based': based,
+       'denture_list': denture_list,
+   }
+   return render(request, 'blog/therapy/temporary_denture.html', context=context)
 # --- Лечение общий список ???
 def service(request):
    context={
