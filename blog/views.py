@@ -455,6 +455,30 @@ def service(request):
    }
    return render(request, 'blog/therapy/service.html', context=context)
 
+# Лечение корневых каналов
+def root_canal_treatment(request):
+   context={
+       'title': 'Лечение корневых каналов',
+       'super_title': 'Когда необходима эндодонтическая терапия (лечение корневых каналов)?',
+       'description': 'Когда необходима эндодонтическая терапия (лечение корневых каналов)?',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/root_canal_treatment.html', context=context)
+
+# inlay-onlay
+def inlay_onlay(request):
+   context={
+       'title': 'Вкладка (inlay, onlay)',
+       'super_title': 'Когда вместо пломбы используются вкладки (inlay, onlay)?',
+       'description': 'Когда вместо пломбы используются вкладки (inlay, onlay)',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/inlay_onlay.html', context=context)
+
+
+
 # --- Вывод статей блога
 
 def blog_list(request):

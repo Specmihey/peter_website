@@ -54,6 +54,10 @@ urlpatterns = [
     path('denture/full_partial_removable_dentures/', full_partial_removable_dentures, name='full_partial_removable_dentures'),  # Полные/частичные съемные протезы
     path('denture/rem_dentures_stab_implants/', rem_dentures_stab_implants, name='rem_dentures_stab_implants'),  # Съемные протезы, стабилизированные имплантатами
     path('denture/temporary_denture/', temporary_denture, name='temporary_denture'),  # Временные протезы
+    # лечение корневых каналов
+    path('root-canal-treatment/', root_canal_treatment, name='root_canal_treatment'),  # лечение корневых каналов
+    # inlay-onlay
+    path('inlay-onlay/', inlay_onlay, name='inlay_onlay'),  # inlay-onlay
 ]
 
 
