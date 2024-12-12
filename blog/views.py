@@ -89,69 +89,97 @@ def warranty(request):
    }
    return render(request, 'blog/warranty.html', context=context)
 
-def contact(request):
-   context={
-       'title': 'Контакты клиники',
-       'super_title': 'Как нас найти',
-       'description': 'Контакты стоматологической клиники Digital Dental Art',
-       'based': based,
-   }
-   return render(request, 'blog/contact.html', context=context)
-
-# def contact(request):
-#     # отображение формы, с предыдущим заполнением
-#     if request.method == 'POST':
-#         form = ContactForm(request.POST)
-#         if form.is_valid():
-#             #print(form.cleaned_data)
-#             subject = 'Форма связи с сайта DNP'
-#             name = form.cleaned_data['name']
-#             phone = form.cleaned_data['phone_number']
-#             treatment = form.cleaned_data['treatment_type']
-#             content = form.cleaned_data['content']
-#             from_email = form.cleaned_data['from_email']
-#             message = (f'<p><strong>Имя:</strong>{name}</p> '
-#                        f'<p><strong>Телефон:</strong> {phone}</p> '
-#                        f'<p>{treatment}</p>'
-#                        f'<p><strong>Сообщение:</strong> {content} </p> '
-#                        f'<p><strong>From email:</strong> {from_email}</p>')
-#
-#
-#             mail = EmailMessage(subject, message, 'estetm2014@yandex.ru', ['specmihey@gmail.com',])
-#             mail.content_subtype = 'html'
-#
-#             try:
-#                 file = request.FILES['file']
-#                 mail.attach(file.name, file.read(), file.content_type)
-#             except:
-#                 pass
-#
-#             mail.send()
-#
-#             if mail:
-#                 messages.success(request, 'Письмо отправлено')
-#                 return redirect('contact')
-#             else:
-#                 messages.error(request, 'Ошибка отправки')
-#     else:
-#         form = ContactForm()
-#
-#     context = {
-#         'title': 'Записаться на прием',
-#         'super_title': 'Записаться на прием',
-#         'description': 'Записаться на прием к врачу клиники Digital Dental Art',
-#         'based': based,
-#     }
-#     return render(request, 'blog/appointment.html', context=context)
 
 def appointment(request):
-   context={
-       'title': 'Записаться на прием',
-       'super_title': 'Записаться на прием',
-       'description': 'Записаться на прием к врачу клиники Digital Dental Art',
-       'based': based,
-   }
-   return render(request, 'blog/appointment.html', context=context)
+    # отображение формы, с предыдущим заполнением
+    if request.method == 'POST':
+        form = ApplicationForm(request.POST)
+        if form.is_valid():
+            #print(form.cleaned_data)
+            subject = 'Записаться на прием'
+            #country = form.cleaned_data['country']
+            name = form.cleaned_data['name']
+            phone = form.cleaned_data['phone_number']
+            content = form.cleaned_data['content']
+            from_email = form.cleaned_data['from_email']
+            treatment = form.cleaned_data['treatment_type']
+            message = f'<p><strong>Имя:</strong>{name}</p><p><strong>Телефон:</strong> {phone}</p><p><strong>Сообщение:</strong> {content} </p><p><strong>From email:</strong> {from_email}</p> Направление лечения: {treatment}'
+            mail = EmailMessage(subject, message, 'estetm2014@yandex.ru', ['specmihey@gmail.com',])
+            mail.content_subtype = 'html'
+
+            try:
+                file = request.FILES['file']
+                mail.attach(file.name, file.read(), file.content_type)
+            except:
+                pass
+
+            mail.send()
+
+            if mail:
+                messages.success(request, 'Письмо отправлено')
+                return redirect('plan')
+            else:
+                messages.error(request, 'Ошибка отправки')
+    else:
+        form = ApplicationForm()
+    context = {
+             'title': 'Записаться на прием',
+             'super_title': 'Записаться на прием',
+             'description': 'Записаться на прием к врачу клиники Digital Dental Art',
+             'based': based,
+             'form': form,
+         }
+    return render(request, 'blog/appointment.html', context=context)
+
+
+# def contact(request):
+#    context={
+#        'title': 'Контакты клиники',
+#        'super_title': 'Как нас найти',
+#        'description': 'Контакты стоматологической клиники Digital Dental Art',
+#        'based': based,
+#    }
+#    return render(request, 'blog/contact.html', context=context)
+def contact(request):
+    # отображение формы, с предыдущим заполнением
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            #print(form.cleaned_data)
+            subject = 'Контакты клиники'
+            name = form.cleaned_data['name']
+            phone = form.cleaned_data['phone_number']
+            content = form.cleaned_data['content']
+            from_email = form.cleaned_data['from_email']
+            treatment = form.cleaned_data['treatment']
+            message = f'<p><strong>Имя:</strong>{name}</p> <p><strong>Телефон:</strong> {phone}</p> <p><strong>Сообщение:</strong> {content} </p> <p><strong>From email:</strong> {from_email}</p><p>treatment: {treatment}</p>'
+            mail = EmailMessage(subject, message, 'estetm2014@yandex.ru', ['specmihey@gmail.com',])
+            mail.content_subtype = 'html'
+
+            try:
+                file = request.FILES['file']
+                mail.attach(file.name, file.read(), file.content_type)
+            except:
+                pass
+
+            mail.send()
+
+            if mail:
+                messages.success(request, 'Письмо отправлено')
+                return redirect('contact')
+            else:
+                messages.error(request, 'Ошибка отправки')
+    else:
+        form = ContactForm()
+
+    context = {
+        'title': 'Контакты клиники',
+        'super_title': 'Как нас найти',
+        'description': 'Контакты стоматологической клиники Digital Dental Art',
+        'based': based,
+        'form': form,
+    }
+    return render(request, 'blog/contact.html', context=context)
 
 def mail_success(request):
    context={
@@ -526,7 +554,7 @@ def circular_bridge_on_8_implants(request):
 
 
 dental_implants_list = [
-    {'title': 'All-on-4™ и All-on-6™', 'img_path': '/static/blog/img/service/tooth-extraction/bolcsessegfog-eltavolitas-bolcsessegfog-eltavolitas_1jpg.jpg',
+    {'title': 'All-on-4™ и All-on-6™', 'img_path': '/static/blog/img/service/dental_bridge/fogaszati-hidak-fogaszati-hidak_1.jpg',
      'url_name': 'all_on_4_all_on_6', 'decription': 'Преимущества зубных протезов All-on-4™ и All-on-6™'},
     {'title': 'Фиксированные мостовидные протезы', 'img_path': '/static/blog/img/service/tooth-extraction/all-on-8-dental-implants-1.jpg',
      'url_name': 'circular_bridge_on_8_implants', 'decription': 'Фиксированные мостовидные протезы из 12 зубов на 8 имплантатах'},
@@ -544,6 +572,16 @@ def dental_implants(request):
    }
    return render(request, 'blog/therapy/dental_implants.html', context=context)
 
+# костная пластика
+def dental_bone_graft(request):
+   context={
+       'title': 'Замена костной ткани',
+       'super_title': 'Почему вам может понадобиться костная пластика?',
+       'description': 'Почему вам может понадобиться костная пластика?',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/dental_bone_graft.html', context=context)
 # --- Вывод статей блога
 
 def blog_list(request):

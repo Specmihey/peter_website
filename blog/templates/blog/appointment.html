@@ -11,7 +11,85 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="contact-us-form">
-							{% include "sections/appointment_form.html" %}
+		<section class="contact-us section">
+			<div class="">
+				<div class="inner">
+					<div class="row">
+
+						<div class="col-lg-12">
+							<div class="contact-us-form">
+								<h2>{{ title }}</h2>
+<!--								<p>If you have any questions please fell free to contact with us.</p>-->
+								<!-- Form -->
+<form action="{% url 'appointment' %}" method="post", enctype="multipart/form-data">
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <h4 {% if message.tags %} class="text-info bg-dark"{% endif %}>{{ message }}</h4>
+    {% endfor %}
+</div>
+{% endif %}
+			{% csrf_token %}
+			{{ form.as_p }}
+            <div class="form-group">
+
+  <h4>Прикрепить снимок.</h4>
+
+            <input type="file" class="form-control-file" name="file">
+            <p class="error_upload"></p>
+
+<div class="form-group">
+<input type="checkbox" class="custom-checkbox" id="cont" name="cont" value="yes">
+<p class="text-left">Я принимаю - <a href="{% url 'privacy_policy' %}">Уведомление о конфиденциальности.</a></p>
+</div>
+
+            </div>
+			<button type="submit" class="btn btn-success btn-lg">Отправить</button>
+			<br><br>
+</form>
+								<!--/ End Form -->
+							</div>
+						</div>
+					</div>
+				</div>
+        <div class="contact-info">
+            <div class="row">
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont icofont-ui-call"></i>
+                        <div class="content">
+                            <h3>+36 70 405 6646</h3>
+                            <p>{{ based.email }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont-google-map"></i>
+                        <div class="content">
+                            <h3>{{ based.address }}</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
+                <!-- single-info -->
+                <div class="col-lg-4 col-12 ">
+                    <div class="single-info">
+                        <i class="icofont icofont-wall-clock"></i>
+                        <div class="content">
+                            <h3>Понед-Пятн: <br>{{ based.time }}</h3>
+                            <p>Сб, Вс - Закрыто</p>
+                        </div>
+                    </div>
+                </div>
+                <!--/End single-info -->
+            </div>
+        </div>
+    </div>
+</section>
 						</div>
 					</div>
 

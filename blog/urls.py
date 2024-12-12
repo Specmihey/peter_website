@@ -21,7 +21,7 @@ urlpatterns = [
     path('price/', price, name='price'), #price
     path('about-clinic/', about_clinic, name='about-clinic'), #о клинике
     # path('faq/', faq, name='faq'), #FAQ
-    path('time_table/', time_table, name='time_table'), #time_table
+    #path('time_table/', time_table, name='time_table'), #time_table
     path('appointment/', appointment, name='appointment'), # Записаться на прием
     path('contact/', contact, name='contact'), # contact
     path('mail-success/', mail_success, name='mail_success'), # mail-success
@@ -67,6 +67,8 @@ urlpatterns = [
     path('circular-bridge-on-8-implants/', circular_bridge_on_8_implants, name='circular_bridge_on_8_implants'),  #
     # circular-bridge-on-8-implants
     path('dental-implants/', dental_implants, name='dental_implants'),  # дентальные имплантанты
+    # костная пластика
+    path('dental-bone-graft/', dental_bone_graft, name='dental_bone_graft'),  # костная пластика
 ]
 
 

@@ -1,0 +1,18 @@
+<form action="{% url 'contact' %}" method="post" enctype="multipart/form-data">
+{% if messages %}
+<div class="messages">
+    {% for message in messages %}
+    <p {% if message.tags %} class="text-info bg-dark"{% endif %}>{{ message }}</p>
+    {% endfor %}
+</div>
+{% endif %}
+			{% csrf_token %}
+			{{ form.as_p }}
+<div class="form-group">
+             <h4>Прикрепить снимок.</h4>
+            <input type="file" class="form-control-file" name="file">
+            <p class="error_upload"></p>
+</div>
+			<button type="submit" class="btn btn-success btn-lg">Отправить</button>
+			<br><br>
+</form>
