@@ -58,6 +58,8 @@ urlpatterns = [
     path('root-canal-treatment/', root_canal_treatment, name='root_canal_treatment'),  # лечение корневых каналов
     # inlay-onlay
     path('inlay-onlay/', inlay_onlay, name='inlay_onlay'),  # inlay-onlay
+    # удаление зуба
+    path('tooth-extraction/', tooth_extraction, name='tooth_extraction'),  # удаление зуба
 ]
 
 

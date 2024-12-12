@@ -459,12 +459,23 @@ def service(request):
 def root_canal_treatment(request):
    context={
        'title': 'Лечение корневых каналов',
-       'super_title': 'Когда необходима эндодонтическая терапия (лечение корневых каналов)?',
+       'super_title': 'Когда необходима эндодонтическая терапия?',
        'description': 'Когда необходима эндодонтическая терапия (лечение корневых каналов)?',
        'based': based,
 
    }
    return render(request, 'blog/therapy/root_canal_treatment.html', context=context)
+
+# удаление зуба
+def tooth_extraction(request):
+   context={
+       'title': 'Удаление зуба',
+       'super_title': 'Когда необходимо удаление зубов?',
+       'description': 'Почему может потребоваться удаление зубов? Когда необходимо удаление зубов?',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/tooth_extraction.html', context=context)
 
 # inlay-onlay
 def inlay_onlay(request):
