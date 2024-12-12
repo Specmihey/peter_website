@@ -60,6 +60,13 @@ urlpatterns = [
     path('inlay-onlay/', inlay_onlay, name='inlay_onlay'),  # inlay-onlay
     # удаление зуба
     path('tooth-extraction/', tooth_extraction, name='tooth_extraction'),  # удаление зуба
+    # удаление зуба
+    path('wisdom-tooth-extraction/', wisdom_tooth_extraction, name='wisdom_tooth_extraction'),  # Удаление зуба мудрости
+    #дентальные имплантанты
+    path('all-on-4-all-on-6/', all_on_4_all_on_6, name='all_on_4_all_on_6'),  # All-on-4™ и All-on-6™
+    path('circular-bridge-on-8-implants/', circular_bridge_on_8_implants, name='circular_bridge_on_8_implants'),  #
+    # circular-bridge-on-8-implants
+    path('dental-implants/', dental_implants, name='dental_implants'),  # дентальные имплантанты
 ]
 
 

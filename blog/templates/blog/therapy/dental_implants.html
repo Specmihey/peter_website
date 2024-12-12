@@ -1,0 +1,54 @@
+ {% extends 'blog/base.html' %}
+ {% load static %}
+
+ {% block content %}
+
+{% block breadcrumbs %}
+   {% include "sections/breadcrumbs.html" %}
+{% endblock breadcrumbs %}
+
+
+<!-- End Service Details -->
+<section class="blog grid section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12">
+                <div class="row">
+                    <h2>Что такое зубной имплантат?</h2>
+<p>
+Имплантация зуба представляет собой искусственное замещение корня зуба. Зубной имплантат изготавливается из титана, который не вызывает раздражения окружающих тканей и полностью совместим с костной тканью челюсти. После процесса остеоинтеграции, то есть вживления в кость, на имплантат устанавливается зубной протез, будь то коронка, мостовидный протез или съемный протез, стабилизированный имплантатами.
+</p>
+<p>
+    Это долговечное и широко применяемое решение, которое позволяет устранить отсутствие зубов наиболее естественным образом или заменить удаленный зуб.
+</p>
+<p>
+    Имплантат можно установить любому человеку с полностью сформированной челюстью независимо от возраста, если у пациента достаточно костной ткани. Если этого условия недостаточно, в нашей клинике можно провести процедуру костной пластики.
+</p>
+                    {% for item in dental_implants_list %}
+                        <!-- Single Blog -->
+                    <div class="col-sm col-12">
+                        <div class="single-news">
+                            <div class="news-head">
+                                <img class="service_img" src="{{ item.img_path }}" alt="{{ item.title }}">
+                            </div>
+                            <div class="news-body">
+                                <div class="news-content">
+                                    <h2><a href="{% url item.url_name %}">{{ item.title }}</a></h2>
+                                    <p class="text">{{ item.decription }}</p>
+                                <div class="button article">
+                                    <a href="{% url item.url_name %}" class="btn">Подробнее</a>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- End Single Blog -->
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+ {% endblock content %}

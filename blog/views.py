@@ -477,6 +477,16 @@ def tooth_extraction(request):
    }
    return render(request, 'blog/therapy/tooth_extraction.html', context=context)
 
+# Удаление зуба мудрости
+def wisdom_tooth_extraction(request):
+   context={
+       'title': 'Удаление зуба мудрости',
+       'super_title': 'Когда необходимо удаление зуба мудрости?',
+       'description': 'Когда необходимо удаление зуба мудрости?',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/wisdom_tooth_extraction.html', context=context)
 # inlay-onlay
 def inlay_onlay(request):
    context={
@@ -488,7 +498,51 @@ def inlay_onlay(request):
    }
    return render(request, 'blog/therapy/inlay_onlay.html', context=context)
 
+# Имплантация
 
+# All-on-4™ и All-on-6™
+def all_on_4_all_on_6(request):
+   context={
+       'title': 'All-on-4™ и All-on-6™',
+       'super_title': 'Преимущества зубных протезов All-on-4™ и All-on-6™',
+       'description': 'Преимущества зубных протезов All-on-4™ и All-on-6™',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/all_on_4_all_on_6.html', context=context)
+
+
+# Фиксированные мостовидные протезы из 12 зубов на 8 имплантатах,/8 implantos körhíd
+def circular_bridge_on_8_implants(request):
+   context={
+       'title': 'Фиксированные мостовидные протезы™',
+       'super_title': 'Фиксированные мостовидные протезы из 12 зубов на 8 имплантатах',
+       'description': 'Фиксированные мостовидные протезы из 12 зубов на 8 имплантатах,/8 implantos körhíd',
+       'based': based,
+
+   }
+   return render(request, 'blog/therapy/circular_bridge_on_8_implants.html', context=context)
+
+
+
+dental_implants_list = [
+    {'title': 'All-on-4™ и All-on-6™', 'img_path': '/static/blog/img/service/tooth-extraction/bolcsessegfog-eltavolitas-bolcsessegfog-eltavolitas_1jpg.jpg',
+     'url_name': 'all_on_4_all_on_6', 'decription': 'Преимущества зубных протезов All-on-4™ и All-on-6™'},
+    {'title': 'Фиксированные мостовидные протезы', 'img_path': '/static/blog/img/service/tooth-extraction/all-on-8-dental-implants-1.jpg',
+     'url_name': 'circular_bridge_on_8_implants', 'decription': 'Фиксированные мостовидные протезы из 12 зубов на 8 имплантатах'},
+]
+
+# Дентальные имплантанты
+def dental_implants(request):
+   context={
+       'title': 'Дентальные имплантанты',
+       'super_title': 'В каких случаях рекомендуется установка зубного имплантата?',
+       'description': 'В каких случаях рекомендуется установка зубного имплантата?',
+       'based': based,
+       'dental_implants_list': dental_implants_list,
+
+   }
+   return render(request, 'blog/therapy/dental_implants.html', context=context)
 
 # --- Вывод статей блога
 

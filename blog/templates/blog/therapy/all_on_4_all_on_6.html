@@ -1,0 +1,96 @@
+ {% extends 'blog/base.html' %}
+ {% load static %}
+
+ {% block content %}
+
+{% block breadcrumbs %}
+<!-- Breadcrumbs -->
+{% include "sections/breadcrumbs.html" %}
+<!-- End Breadcrumbs -->
+{% endblock breadcrumbs %}
+
+		<section class="section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<!--  Inner -->
+<div class="row">
+	<div class="col-lg-8">
+
+			<h2>{{ title }}</h2>
+
+        <h3>Лучшие решения с наилучшим соотношением цены и качества при полной адентии</h3>
+<p>
+    Улыбайтесь и ешьте уверенно, забудьте о неудобных съемных протезах!
+</p>
+<p>
+    Система All-on-4™ основана на установке 4 имплантатов в определенные места челюсти, чтобы создать трехмерное трапециевидное усилие, позволяющее 4 имплантатам удерживать протез из 10-12 зубов. Поскольку устанавливается меньшее количество имплантатов, это значительно дешевле по сравнению с другими фиксированными имплантационными решениями.
+</p>
+<p>
+    Решение All-on-4™ обеспечивает большую стабильность в кости, а также помогает избежать выполнения некоторых дополнительных операций, таких как костная пластика. После установки имплантатов мы можем сразу же установить временный зубной ряд, избегая неудобств, связанных с полным отсутствием зубов.
+</p>
+<p>
+    Имплантация All-on-6™ является вариацией технологии All-on-4™ с той разницей, что вместо 4 имплантатов в переднюю часть челюсти устанавливается 6. Вариант с 6 имплантатами в основном рекомендуется для верхней челюсти.
+</p>
+<p>
+    Методы имплантации All-on-4™ или All-on-6™ также подходят для тех, кто раньше носил съемные протезы, но находил их использование неудобным.
+</p>
+
+	</div>
+
+	<div class="col-lg-4">
+
+			<img src="{% static 'blog/img/service/dental_bridge/fogaszati-hidak-fogaszati-hidak_1.jpg' %}" alt="Слепок зубов">
+
+	</div>
+
+</div>
+
+<br>
+{% include "sections/button-center.html" %}
+	<br>
+<div class="row">
+		<div class="col-lg-4">
+
+			<img class="float-left" src="{% static 'blog/img/service/dental_bridge/-fogaszati-hidak-dentist-examining-female-patient-teeth-2.jpg' %}" alt="Открытый рот пациента">
+
+	</div>
+	<div class="col-lg-8">
+
+			<h3>Преимущества зубных протезов All-on-4™ и All-on-6™</h3>
+<p><strong>Из-за нехватки зубов могут возникнуть следующие проблемы:</strong></p> <br>
+			<ul class="list">
+				<li><i class="fa fa-check fa-2x"></i> Отличное соотношение цены и качества, так как для полной реконструкции зубного ряда достаточно установки всего 4 или 6 имплантатов на каждой челюсти.</li>
+				<li><i class="fa fa-check fa-2x"></i> Идеальное решение для тех, кто потерял все зубы.</li>
+				<li><i class="fa fa-check fa-2x"></i> Лечение позволяет избежать костной пластики.</li>
+				<li><i class="fa fa-check fa-2x"></i> Нет необходимости в использовании фиксирующего клея для протезов.</li>
+				<li><i class="fa fa-check fa-2x"></i> Протез не будет ослабляться, двигаться или качаться.</li>
+				<li><i class="fa fa-check fa-2x"></i> Небо полностью свободно.</li>
+                <li><i class="fa fa-check fa-2x"></i> Протез фиксируется на имплантатах.</li>
+                <li><i class="fa fa-check fa-2x"></i> Может быть выполнено даже при многолетнем отсутствии зубов и недостатке кости.</li>
+                <li><i class="fa fa-check fa-2x"></i> Легко ухаживать.</li>
+                <li><i class="fa fa-check fa-2x"></i> Быстро выполняется.</li>
+			</ul>
+			<br>
+<h3>Хотите снова есть и смеяться комфортно и свободно?</h3>
+	</div>
+</div>
+
+{% include "sections/button-center.html" %}
+						<br>
+<div class="row">
+<div class="col-12">
+	<img src="{% static 'blog/img/service/dental_bridge/hidak-dental-bridge-3.jpg' %}" alt="Виды мостов">
+</div></div>
+						<br>
+
+
+						<!--/ End Inner -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End  Page -->
+
+
+{% endblock content %}
