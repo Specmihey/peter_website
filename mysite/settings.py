@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*4^g&s^3_)emy#hv8bef#j2j02xi@*os4f$cy*e05#$!wzhd&6'
+SECRET_KEY = '****************************'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -155,10 +155,10 @@ DEBUG_TOOLBAR_CONFIG = {
 }
 
 # ----- Для отправки писем
-# EMAIL_HOST = 'mail.post.europa-dental.ru'
+# EMAIL_HOST = '**************'
 # EMAIL_PORT = '465' #2525
-# EMAIL_HOST_USER = 'estetm2014@yandex.ru' #логин доступа к почте
-# EMAIL_HOST_PASSWORD = '81S0Wi0dIvjB8PkN'
+# EMAIL_HOST_USER = '************' #логин доступа к почте
+# EMAIL_HOST_PASSWORD = '***********'
 # EMAIL_USE_TLS = False
 # EMAIL_USE_SSL = True
 
